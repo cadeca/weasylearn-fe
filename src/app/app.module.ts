@@ -7,6 +7,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {ComponentsModule} from './components/components.module';
 import {ProvidersModule} from './providers/providers.module';
+import {AuthGuard} from './providers/AuthGuard.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -19,7 +21,11 @@ import {ProvidersModule} from './providers/providers.module';
   declarations: [
     AppComponent
   ],
-  providers: [ProvidersModule],
+  providers: [
+    ProvidersModule,
+    AuthGuard,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
