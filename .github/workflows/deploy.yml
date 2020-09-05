@@ -1,4 +1,4 @@
-name: Build & Deploy To Github pages
+name: Build & Deploy To Firebase
 
 on:
   push:
