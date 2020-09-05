@@ -9,6 +9,9 @@ import {ComponentsModule} from './components/components.module';
 import {ProvidersModule} from './providers/providers.module';
 import {AuthGuard} from './providers/AuthGuard.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,6 +19,15 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    // ngx-translate and the loader module
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
@@ -29,3 +41,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// required for AOT compilation
+// tslint:disable-next-line:typedef
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

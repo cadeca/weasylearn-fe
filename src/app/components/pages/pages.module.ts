@@ -9,6 +9,7 @@ import {RouterModule} from '@angular/router';
 import {HomePageComponent} from './home-page/home-page.component';
 import {SubjectsPageComponent} from './subjects-page/subjects-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 const components = [
   HomePageComponent,
@@ -26,7 +27,8 @@ const components = [
     FormsModule,
     ReactiveFormsModule,
     PrimitivesModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   exports: components,
 })
