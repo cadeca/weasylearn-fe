@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'vtl-home',
+  selector: 'wl-home',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
