@@ -4,9 +4,11 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {HeaderComponent} from './header/header.component';
+import {AppRoutingModule} from '../../app-routing.module';
 
 const components = [
-
+  HeaderComponent
 ];
 
 @NgModule({
@@ -17,7 +19,8 @@ const components = [
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppRoutingModule
   ],
   exports: components,
 })
