@@ -1,0 +1,9 @@
+@import "src/assets/style/variables.scss";
+
+.side-menu {
+  position: fixed;
+  top: $wl-header-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

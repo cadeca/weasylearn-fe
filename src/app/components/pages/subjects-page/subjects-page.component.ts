@@ -11,9 +11,9 @@ export class SubjectsPageComponent implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit(): void {
-    this.courseService.getAllCourseSubjects().subscribe(value => {
-      console.log(value);
-    });
+    // this.courseService.getAllCourseSubjects().subscribe(value => {
+    //   console.log(value);
+    // });
   }
 
 }

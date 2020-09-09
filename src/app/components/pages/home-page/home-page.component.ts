@@ -11,6 +11,6 @@ export class HomePageComponent {
   constructor(private router: Router) { }
 
   navigateToDashboard(): void {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard/subjects']);
   }
 }

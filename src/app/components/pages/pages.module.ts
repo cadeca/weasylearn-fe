@@ -11,6 +11,7 @@ import {SubjectsPageComponent} from './subjects-page/subjects-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
+import {MaterialModule} from '../../material.module';
 
 const components = [
   HomePageComponent,
@@ -30,7 +31,8 @@ const components = [
     ReactiveFormsModule,
     PrimitivesModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    MaterialModule
   ],
   exports: components,
 })
