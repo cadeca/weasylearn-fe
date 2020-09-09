@@ -19,13 +19,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "vtl",
+      "wl",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "vtl",
+      "wl",
       "kebab-case"
     ],
     "eofline": true,

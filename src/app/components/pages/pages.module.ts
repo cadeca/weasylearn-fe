@@ -10,6 +10,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {SubjectsPageComponent} from './subjects-page/subjects-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {TranslateModule} from '@ngx-translate/core';
+import {ProvidersModule} from '../../providers/providers.module';
 
 const components = [
   HomePageComponent,
@@ -20,6 +21,7 @@ const components = [
 @NgModule({
   declarations: components,
   imports: [
+    ProvidersModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,

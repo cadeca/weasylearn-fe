@@ -1,6 +1,7 @@
 {
   "homePage": {
-    "title": "HomePage works"
+    "title": "Welcome to WeasyLearn!",
+    "findOutMore": "Click to find out more!"
   },
   "subjectsPage": {
     "title": "SubjectsPage works"

@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'vtl-home',
+  selector: 'wl-home',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  navigateToDashboard(): void {
+    this.router.navigate(['/dashboard']);
+  }
 }
