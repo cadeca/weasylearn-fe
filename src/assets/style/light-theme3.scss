@@ -1,0 +1,126 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+$mat-teal: (
+  50: #eef6f7,
+  100: #cbe3e7,
+  200: #a8d0d7,
+  300: #85bdc7,
+  400: #62aab7,
+  500: #4b97a4,
+  600: #48909d,
+  700: #40808c,
+  800: #306069,
+  900: #204046,
+  A100: #85c7c7,
+  A200: #50afaf,
+  A400: #489d9d,
+  A700: #387a7a,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+$mat-amber: (
+  50:  #edf6f7,
+  100: #cae5e7,
+  200: #a7d3d7,
+  300: #95cbd0,
+  400: #84c2c8,
+  500: #6fb8be,
+  600: #4fa8b0,
+  700: #3f868d,
+  800: #2f656a,
+  900: #204346,
+  A100: #a7d7d7,
+  A200: #6fbebe,
+  A400: #479e9e,
+  A700: #2f6a6a,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+$mat-magenta: (
+  50: #fce9f4,
+  100: #f1a7d3,
+  200: #e765b3,
+  300: #e0389d,
+  400: #c71f84,
+  500: #a1196b,
+  600: #9a1866,
+  700: #841558,
+  800: #6e1149,
+  900: #420a2c,
+  A100: #ea7bce,
+  A200: #c71f9d,
+  A400: #9f197d,
+  A700: #841568,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
+// Define an alternate light theme.
+$light-primary: mat-palette($mat-teal);
+$light-accent:  mat-palette($mat-amber);
+$light-warn:    mat-palette($mat-magenta);
+$light-theme:   mat-light-theme(
+  (
+    color: (
+      primary: $light-primary,
+      accent: $light-accent,
+      warn: $light-warn,
+    )
+  )
+);
+
+// Include the light color styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-light-theme` will be affected by this alternate light theme instead of the default theme.
+
+.light-theme3 {
+  @include angular-material-color($light-theme);
+}

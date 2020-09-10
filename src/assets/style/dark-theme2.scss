@@ -7,20 +7,20 @@
 @include mat-core();
 
 $mat-teal: (
-  50: #e0f2f1,
-  100: #b2dfdb,
-  200: #80cbc4,
-  300: #4db6ac,
-  400: #26a69a,
-  500: #009688,
-  600: #00897b,
-  700: #00796b,
-  800: #00695c,
-  900: #004d40,
-  A100: #a7ffeb,
-  A200: #64ffda,
-  A400: #1de9b6,
-  A700: #00bfa5,
+  50: #eef6f7,
+  100: #cbe3e7,
+  200: #a8d0d7,
+  300: #85bdc7,
+  400: #62aab7,
+  500: #4b97a4,
+  600: #48909d,
+  700: #40808c,
+  800: #306069,
+  900: #204046,
+  A100: #85c7c7,
+  A200: #50afaf,
+  A400: #489d9d,
+  A700: #387a7a,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -39,52 +39,52 @@ $mat-teal: (
   )
 );
 $mat-amber: (
-  50: #fff8e1,
-  100: #ffecb3,
-  200: #ffe082,
-  300: #ffd54f,
-  400: #ffca28,
-  500: #ffd740,
-  600: #ffb300,
-  700: #ffa000,
-  800: #ff8f00,
-  900: #ff6f00,
-  A100: #ffe57f,
-  A200: #ffc107,
-  A400: #ffc400,
-  A700: #ffab00,
+  50: #fff8e6,
+  100: #fef0cd,
+  200: #fee9b4,
+  300: #fdd368,
+  400: #fcc436,
+  500: #fcbb15,
+  600: #fbb504,
+  700: #c99103,
+  800: #976d02,
+  900: #644802,
+  A100: #fdde81,
+  A200: #fcca36,
+  A400: #fbbd04,
+  A700: #c99703,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
     200: $dark-primary-text,
     300: $dark-primary-text,
     400: $dark-primary-text,
-    500: $dark-primary-text,
-    600: $dark-primary-text,
-    700: $dark-primary-text,
-    800: $dark-primary-text,
-    900: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
     A100: $dark-primary-text,
     A200: $dark-primary-text,
     A400: $dark-primary-text,
     A700: $dark-primary-text,
   )
 );
-$mat-red: (
-  50: #ffebee,
-  100: #ffcdd2,
-  200: #ef9a9a,
-  300: #e57373,
-  400: #ef5350,
-  500: #d50000,
-  600: #e53935,
-  700: #d32f2f,
-  800: #c62828,
-  900: #b71c1c,
-  A100: #ff8a80,
-  A200: #ff5252,
-  A400: #ff1744,
-  A700: #f44336,
+$mat-orange: (
+  50: #fff0e6,
+  100: #ffd2b3,
+  200: #feb580,
+  300: #fea667,
+  400: #fe8834,
+  700: #e46001,
+  500: #fe7210,
+  600: #fe6a01,
+  800: #cb5501,
+  900: #984001,
+  A100: #fea080,
+  A200: #fe531b,
+  A400: #fe4001,
+  A700: #cb3401,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -102,23 +102,26 @@ $mat-red: (
     A700: $light-primary-text,
   )
 );
-// Define the default theme (same as the example above).
-$light-primary: mat-palette($mat-teal);
-$light-accent:  mat-palette($mat-amber);
-$light-warn:    mat-palette($mat-red);
-$light-theme:   mat-light-theme(
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-teal);
+$dark-accent:  mat-palette($mat-amber);
+$dark-warn:    mat-palette($mat-orange);
+$dark-theme:   mat-dark-theme(
   (
     color: (
-      primary: $light-primary,
-      accent: $light-accent,
-      warn:$light-warn
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
     )
   )
 );
 
-// Include the default theme styles (color and default density)
-@include angular-material-theme($light-theme);
+// Include the dark color styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 
-.light-theme {
-  @include angular-material-color($light-theme);
+.unicorn-dark-theme,
+.dark-theme2 {
+  @include angular-material-color($dark-theme);
 }
