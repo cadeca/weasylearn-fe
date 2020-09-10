@@ -1,0 +1,54 @@
+$transition-hide: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-show: cubic-bezier(0, 0, 0.2, 1);
+$transition-move: cubic-bezier(0.4, 0, 0.2, 1);
+
+$duration-fast: 250ms;
+$duration-slow: 200ms;
+
+$transition-delay: 50ms;
+
+//Slide in from left animation
+
+.slide-in-left-enter-active {
+  transition: all $duration-fast $transition-show !important;
+}
+
+.slide-in-left-leave-active {
+  transition: all $duration-slow $transition-hide !important;
+}
+
+.slide-in-left-enter,
+.slide-in-left-leave-to {
+  transform: translateX(-100%) !important;
+}
+
+//Slide in from right animation
+
+.slide-in-right-enter-active {
+  transition: all $duration-fast $transition-show !important;
+}
+
+.slide-in-right-leave-active {
+  transition: all $duration-slow $transition-hide !important;
+}
+
+.slide-in-right-enter,
+.slide-in-right-leave-to {
+  transform: translateX(100%) !important;
+}
+
+//Fade in from above animation
+
+.fade-in-above-enter-active {
+  transition: all $duration-fast $transition-hide $transition-delay !important;
+}
+
+.fade-in-above-leave-active {
+  transition: all $duration-slow $transition-hide !important;
+}
+
+.fade-in-above-enter,
+.fade-in-above-leave-to {
+  opacity: 0;
+  transform: translateY(-32px) !important;
+}

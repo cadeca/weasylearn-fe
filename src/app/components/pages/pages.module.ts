@@ -6,16 +6,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {PrimitivesModule} from '../primitives/primitives.module';
 import {RouterModule} from '@angular/router';
-import {HomePageComponent} from './home-page/home-page.component';
 import {SubjectsPageComponent} from './subjects-page/subjects-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
+import {MaterialModule} from '../../material.module';
+import {ThemeTestPageComponent} from './theme-test-page/theme-test-page.component';
 
 const components = [
-  HomePageComponent,
   SubjectsPageComponent,
-  DashboardPageComponent
+  DashboardPageComponent,
+  ThemeTestPageComponent
 ];
 
 @NgModule({
@@ -30,7 +31,8 @@ const components = [
     ReactiveFormsModule,
     PrimitivesModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    MaterialModule
   ],
   exports: components,
 })

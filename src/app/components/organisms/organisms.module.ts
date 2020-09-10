@@ -4,6 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MaterialModule} from '../../material.module';
 
 const components = [
 ];
@@ -17,6 +18,7 @@ const components = [
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    MaterialModule
   ],
   exports: components,
 })

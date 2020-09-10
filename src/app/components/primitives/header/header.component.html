@@ -1,14 +1,22 @@
-<ul class="nav">
-  <li class="nav-item">
-    <a class="nav-link active" [routerLink]="['/dashboard/subjects']">Subjects</a>
-  </li>
-<!--  <li class="nav-item">-->
-<!--    <a class="nav-link" [routerLink]="['/dashboard']">Link</a>-->
-<!--  </li>-->
-<!--  <li class="nav-item">-->
-<!--    <a class="nav-link" [routerLink]="['/dashboard/subjects']">Link</a>-->
-<!--  </li>-->
-<!--  <li class="nav-item">-->
-<!--    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
-<!--  </li>-->
-</ul>
+<mat-toolbar class="header" color="primary">
+  <div>WeasyLearn</div>
+  <div>
+    <mat-icon
+      class="icon"
+      [matMenuTriggerFor]="menu">
+      palette
+    </mat-icon>
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        (click)="changeTheme('light-theme')">
+        Light theme
+      </button>
+      <button
+        mat-menu-item
+        (click)="changeTheme('dark-theme')">
+        Dark theme
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
