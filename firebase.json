@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/vitele-fe",
+    "public": "dist/weasylearn-fe",
     "ignore": [
       "firebase.json",
       "**/.*",
