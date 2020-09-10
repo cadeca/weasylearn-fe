@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseService} from '../../../providers/course.service';
 
 @Component({
   selector: 'wl-subjects-page',
@@ -8,12 +7,9 @@ import {CourseService} from '../../../providers/course.service';
 })
 export class SubjectsPageComponent implements OnInit {
 
-  constructor(private courseService: CourseService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.courseService.getAllCourseSubjects().subscribe(value => {
-    //   console.log(value);
-    // });
   }
 
 }
