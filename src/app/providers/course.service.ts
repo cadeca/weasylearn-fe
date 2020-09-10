@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpService} from './Http.service';
 import {Observable} from 'rxjs';
-import {CourseSubject} from './types/vtl-types';
+import {CourseSubject} from './types/wl-types';
 
 @Injectable()
 export class CourseService {
