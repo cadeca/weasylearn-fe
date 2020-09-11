@@ -8,7 +8,7 @@ import {MaterialModule} from '../../material.module';
 import {HeaderComponent} from './header/header.component';
 import {SideMenuComponent} from './side-menu/side-menu.component';
 import {PrimitivesModule} from '../primitives/primitives.module';
-import {AppRoutingModule} from '../../app-routing.module';
+import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 
 const components = [
   HeaderComponent,
@@ -26,7 +26,7 @@ const components = [
     ReactiveFormsModule,
     MaterialModule,
     PrimitivesModule,
-    AppRoutingModule,
+    WeasyLearnRoutingModule,
   ],
   exports: components,
 })
