@@ -12,6 +12,7 @@ import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
 import {MaterialModule} from '../../material.module';
 import {ThemeTestPageComponent} from './theme-test-page/theme-test-page.component';
+import {OrganismsModule} from '../organisms/organisms.module';
 
 const components = [
   SubjectsPageComponent,
@@ -23,6 +24,7 @@ const components = [
   declarations: components,
   imports: [
     ProvidersModule,
+    OrganismsModule,
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,

@@ -4,15 +4,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {HeaderComponent} from './header/header.component';
 import {AppRoutingModule} from '../../app-routing.module';
-import {SideMenuComponent} from './side-menu/side-menu.component';
 import {MaterialModule} from '../../material.module';
+import {ThemeSwitcherComponent} from './theme-switcher/theme-switcher.component';
 
 const components = [
-  HeaderComponent,
-  SideMenuComponent
-
+  ThemeSwitcherComponent
 ];
 
 @NgModule({

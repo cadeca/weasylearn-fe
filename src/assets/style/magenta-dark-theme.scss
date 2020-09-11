@@ -103,24 +103,25 @@ $mat-magenta: (
   )
 );
 
-// Define an alternate light theme.
-$light-primary: mat-palette($mat-teal);
-$light-accent:  mat-palette($mat-amber);
-$light-warn:    mat-palette($mat-magenta);
-$light-theme:   mat-light-theme(
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-teal);
+$dark-accent:  mat-palette($mat-amber);
+$dark-warn:    mat-palette($mat-magenta);
+$dark-theme:   mat-dark-theme(
   (
     color: (
-      primary: $light-primary,
-      accent: $light-accent,
-      warn: $light-warn,
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
     )
   )
 );
 
-// Include the light color styles inside of a block with a CSS class. You can make this
+// Include the dark color styles inside of a block with a CSS class. You can make this
 // CSS class whatever you want. In this example, any component inside of an element with
-// `.unicorn-light-theme` will be affected by this alternate light theme instead of the default theme.
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 
-.light-theme3 {
-  @include angular-material-color($light-theme);
+.unicorn-dark-theme,
+.magenta-dark-theme {
+  @include angular-material-color($dark-theme);
 }

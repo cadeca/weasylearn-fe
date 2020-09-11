@@ -39,20 +39,20 @@ $mat-teal: (
   )
 );
 $mat-amber: (
-  50: #fff8e6,
-  100: #fef0cd,
-  200: #fee9b4,
-  300: #fdd368,
-  400: #fcc436,
-  500: #fcbb15,
-  600: #fbb504,
-  700: #c99103,
-  800: #976d02,
-  900: #644802,
-  A100: #fdde81,
-  A200: #fcca36,
-  A400: #fbbd04,
-  A700: #c99703,
+  50:  #edf6f7,
+  100: #cae5e7,
+  200: #a7d3d7,
+  300: #95cbd0,
+  400: #84c2c8,
+  500: #6fb8be,
+  600: #4fa8b0,
+  700: #3f868d,
+  800: #2f656a,
+  900: #204346,
+  A100: #a7d7d7,
+  A200: #6fbebe,
+  A400: #479e9e,
+  A700: #2f6a6a,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -70,21 +70,21 @@ $mat-amber: (
     A700: $dark-primary-text,
   )
 );
-$mat-orange: (
-  50: #fff0e6,
-  100: #ffd2b3,
-  200: #feb580,
-  300: #fea667,
-  400: #fe8834,
-  700: #e46001,
-  500: #fe7210,
-  600: #fe6a01,
-  800: #cb5501,
-  900: #984001,
-  A100: #fea080,
-  A200: #fe531b,
-  A400: #fe4001,
-  A700: #cb3401,
+$mat-magenta: (
+  50: #fce9f4,
+  100: #f1a7d3,
+  200: #e765b3,
+  300: #e0389d,
+  400: #c71f84,
+  500: #a1196b,
+  600: #9a1866,
+  700: #841558,
+  800: #6e1149,
+  900: #420a2c,
+  A100: #ea7bce,
+  A200: #c71f9d,
+  A400: #9f197d,
+  A700: #841568,
   contrast: (
     50: $dark-primary-text,
     100: $dark-primary-text,
@@ -97,16 +97,16 @@ $mat-orange: (
     800: $light-primary-text,
     900: $light-primary-text,
     A100: $dark-primary-text,
-    A200: $light-primary-text,
-    A400: $light-primary-text,
-    A700: $light-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
   )
 );
 
 // Define an alternate light theme.
 $light-primary: mat-palette($mat-teal);
 $light-accent:  mat-palette($mat-amber);
-$light-warn:    mat-palette($mat-red);
+$light-warn:    mat-palette($mat-magenta);
 $light-theme:   mat-light-theme(
   (
     color: (
@@ -120,8 +120,7 @@ $light-theme:   mat-light-theme(
 // Include the light color styles inside of a block with a CSS class. You can make this
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.unicorn-light-theme` will be affected by this alternate light theme instead of the default theme.
-@include angular-material-color($light-theme);
 
-.light-theme2 {
+.magenta-light-theme {
   @include angular-material-color($light-theme);
 }

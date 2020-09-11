@@ -122,6 +122,6 @@ $dark-theme:   mat-dark-theme(
 // `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 
 .unicorn-dark-theme,
-.dark-theme2 {
+.orange-dark-theme {
   @include angular-material-color($dark-theme);
 }

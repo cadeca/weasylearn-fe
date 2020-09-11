@@ -24,7 +24,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 // import {MatSliderModule} from '@angular/material/slider';
 // import {MatSnackBarModule} from '@angular/material/snack-bar';
-// import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 // import {MatSortModule} from '@angular/material/sort';
 // import {MatStepperModule} from '@angular/material/stepper';
 // import {MatTableModule} from '@angular/material/table';
@@ -59,7 +59,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     // MatSelectModule,
     MatSidenavModule,
     // MatSliderModule,
-    // MatSlideToggleModule,
+    MatSlideToggleModule,
     // MatSnackBarModule,
     // MatSortModule,
     // MatStepperModule,
@@ -94,7 +94,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     // MatSelectModule,
     MatSidenavModule,
     // MatSliderModule,
-    // MatSlideToggleModule,
+    MatSlideToggleModule,
     // MatSnackBarModule,
     // MatSortModule,
     // MatStepperModule,
