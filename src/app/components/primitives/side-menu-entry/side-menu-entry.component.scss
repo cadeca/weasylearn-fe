@@ -1,0 +1,28 @@
+@import "src/assets/style/variables";
+
+.side-menu-entry {
+  text-align: left;
+
+  .entry-definition {
+    display: flex;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $body-font-color--secondary;
+
+    .icon {
+      margin: 0 0.5rem;
+    }
+
+    .dropdown-icon {
+      margin-left: auto;
+    }
+
+    &:hover {
+      color: $wl-primary;
+      cursor: pointer;
+    }
+  }
+
+  .children-container {
+    padding-left: 10px;
+  }
+}

@@ -1,6 +1,8 @@
 <mat-sidenav-container class="side-menu">
-  <mat-sidenav #sidenav mode="side" opened>
-    <div>Sidenav content</div>
+  <mat-sidenav #sidenav mode="side" opened class="side-bar">
+    <div>
+      <wl-side-menu-entry *ngFor="let sideMenuEntry of currentUserMenuItems" [sidebarEntry]="sideMenuEntry"></wl-side-menu-entry>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet></router-outlet>

@@ -7,9 +7,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from '../../app-routing.module';
 import {MaterialModule} from '../../material.module';
 import {ThemeSwitcherComponent} from './theme-switcher/theme-switcher.component';
+import {SideMenuEntryComponent} from './side-menu-entry/side-menu-entry.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 const components = [
-  ThemeSwitcherComponent
+  ThemeSwitcherComponent,
+  SideMenuEntryComponent
 ];
 
 @NgModule({
@@ -22,7 +25,8 @@ const components = [
     ReactiveFormsModule,
     FlexLayoutModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    TranslateModule
   ],
   exports: components,
 })

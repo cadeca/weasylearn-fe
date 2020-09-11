@@ -8,3 +8,11 @@ export interface CourseSubject  {
   code?: string;
   teacher?: string;
 }
+
+export interface SidebarEntry {
+  code: string;
+  route: string;
+  icon: string;
+  whitelistedRoles: string[];
+  children?: SidebarEntry[];
+}
