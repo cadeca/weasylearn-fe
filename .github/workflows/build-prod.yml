@@ -1,10 +1,11 @@
-name: Build & Deploy To Firebase
+name: Build For Production
 
 on:
-  push:
+  pull_request:
     branches:
       - master
       - 'release/**'
+      - develop
 
 jobs:
   build:
@@ -23,18 +24,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Node ${{ matrix.node-version }}
+      - name: Setup Node ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install
-        run: npm install
-      - name: Build for Production
-        run: npm run build-prod
-      - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
+      - name: npm install and npm run build prod
+        run: |
+          npm i
+          npm run build-prod
