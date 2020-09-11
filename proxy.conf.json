@@ -1,19 +1,19 @@
 {
   "/api": {
-    "target": "http://0.0.0.0:6060",
-    "host": "http://0.0.0.0:6060",
+    "target": "http://0.0.0.0:2020",
+    "host": "http://0.0.0.0:2020",
     "logLevel": "info",
-    "secure": false,
+    "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
       "^/proxy": ""
     }
   },
   "/api/*": {
-    "target": "http://0.0.0.0:6060",
-    "host": "http://0.0.0.0:6060",
+    "target": "http://0.0.0.0:2020",
+    "host": "http://0.0.0.0:2020",
     "logLevel": "info",
-    "secure": false,
+    "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
       "^/proxy": ""

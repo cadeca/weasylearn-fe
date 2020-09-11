@@ -5,7 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HeaderComponent} from './header/header.component';
-import {AppRoutingModule} from '../../app-routing.module';
+import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 import {SideMenuComponent} from './side-menu/side-menu.component';
 import {MaterialModule} from '../../material.module';
 
@@ -24,7 +24,7 @@ const components = [
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    AppRoutingModule,
+    WeasyLearnRoutingModule,
     MaterialModule
   ],
   exports: components,

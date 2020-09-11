@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {KeycloakService} from 'keycloak-angular';
+import {AuthService} from '../../../providers/auth.service';
 
 @Component({
   selector: 'wl-header',
@@ -10,15 +12,18 @@ export class HeaderComponent implements OnInit {
   opened: boolean;
   // let's define default theme
   themeColor = 'light-theme';
-  constructor() { }
+
+  constructor(private keycloakService: KeycloakService, private authService: AuthService) {
+  }
 
   ngOnInit(): void {
     this.setDefaultTheme();
+    console.log(this.authService.getUserRoles());
   }
 
   setDefaultTheme(): void {
     // if theme is stored in storage - use it
-    if (localStorage.getItem('pxTheme')){
+    if (localStorage.getItem('pxTheme')) {
       // set theme color to one from storage
       this.themeColor = localStorage.getItem('pxTheme');
       // add that class to body
@@ -41,5 +46,13 @@ export class HeaderComponent implements OnInit {
     // save it to local storage
 
     localStorage.setItem('pxTheme', this.themeColor);
+  }
+
+  logout(): void {
+    this.keycloakService.logout();
+  }
+
+  profilePage(): void {
+    this.authService.goToProfilePage();
   }
 }
