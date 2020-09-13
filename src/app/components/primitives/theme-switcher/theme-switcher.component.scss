@@ -28,4 +28,31 @@
   display: flex;
   justify-content: center;
   background-color: $wl-primary;
+
+  > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:first-child {
+      border-right: 1px solid #fff;
+    }
+
+    .icon {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+/deep/ .mat-slide-toggle {
+
+  label {
+    margin: 0;
+  }
 }

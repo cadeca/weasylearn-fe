@@ -10,6 +10,7 @@ import {SideMenuComponent} from './side-menu/side-menu.component';
 import {PrimitivesModule} from '../primitives/primitives.module';
 import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 import {TranslateModule} from '@ngx-translate/core';
+import {ProvidersModule} from '../../providers/providers.module';
 
 const components = [
   HeaderComponent,
@@ -28,7 +29,8 @@ const components = [
     MaterialModule,
     PrimitivesModule,
     WeasyLearnRoutingModule,
-    TranslateModule
+    TranslateModule,
+    ProvidersModule
   ],
   exports: components
 })

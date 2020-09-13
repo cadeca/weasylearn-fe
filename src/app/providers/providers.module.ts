@@ -3,6 +3,7 @@ import {AuthGuard} from './AuthGuard.service';
 import {AuthService} from './auth.service';
 import {HttpService} from './Http.service';
 import {CourseService} from './course.service';
+import {ModulePermissionsService} from './module-permissions.service';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import {CourseService} from './course.service';
     HttpService,
     AuthGuard,
     AuthService,
-    CourseService
+    CourseService,
+    ModulePermissionsService
   ]
 })
 export class ProvidersModule {

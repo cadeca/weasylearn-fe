@@ -1,11 +1,7 @@
 <div class="theme-switcher">
   <div>
-    <mat-slide-toggle (change)="changeThemeLight($event)" [checked]="darkThemeModeOn"></mat-slide-toggle>
-  </div>
-  <div>
     <mat-icon
       class="icon"
-      color="warn"
       [matMenuTriggerFor]="menu">
       palette
     </mat-icon>
@@ -21,5 +17,8 @@
         Magenta
       </button>
     </mat-menu>
+  </div>
+  <div>
+    <mat-slide-toggle (change)="changeThemeLight($event)" [checked]="darkThemeModeOn"></mat-slide-toggle>
   </div>
 </div>
