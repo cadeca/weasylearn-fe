@@ -1,3 +1,5 @@
+@import "src/assets/style/variables";
+
 /deep/ .mat-slide-toggle:not(.mat-disabled) {
 
   .mat-slide-toggle-bar {
@@ -24,4 +26,6 @@
 
 .theme-switcher {
   display: flex;
+  justify-content: center;
+  background-color: $wl-primary;
 }

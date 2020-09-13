@@ -8,10 +8,13 @@ import {KeycloakService} from 'keycloak-angular';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  username: string;
+  image: File = null;
   constructor(private keycloakService: KeycloakService, private authService: AuthService) {
   }
 
   ngOnInit(): void {
+    this.username = this.authService.getUserName();
   }
 
   logout(): void {

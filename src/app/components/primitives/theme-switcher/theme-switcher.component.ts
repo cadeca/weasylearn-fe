@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ThemeSwitcherComponent implements OnInit {
 
   themeLight = 'light-theme';
-  themeColor = 'magenta';
+  themeColor = 'orange-';
   darkThemeModeOn = false;
   constructor() { }
 
@@ -25,6 +25,8 @@ export class ThemeSwitcherComponent implements OnInit {
       // add that class to body
       const body = document.getElementsByTagName('body')[0];
       body.classList.add(this.themeColor + this.themeLight);
+    } else {
+      this.changeTheme(this.themeColor, this.themeLight);
     }
   }
 
@@ -40,6 +42,8 @@ export class ThemeSwitcherComponent implements OnInit {
       this.themeLight = themeLightToSet;
     }
 
+    console.log(this.themeLight);
+    console.log(this.themeColor);
     body.classList.add(this.themeColor + this.themeLight);
 
     // save it to local storage

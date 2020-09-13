@@ -9,6 +9,7 @@ import {HeaderComponent} from './header/header.component';
 import {SideMenuComponent} from './side-menu/side-menu.component';
 import {PrimitivesModule} from '../primitives/primitives.module';
 import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 const components = [
   HeaderComponent,
@@ -27,8 +28,9 @@ const components = [
     MaterialModule,
     PrimitivesModule,
     WeasyLearnRoutingModule,
+    TranslateModule
   ],
-  exports: components,
+  exports: components
 })
 export class OrganismsModule {
 }

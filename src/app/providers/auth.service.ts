@@ -14,4 +14,14 @@ export class AuthService {
   getUserRoles(): string[] {
     return this.keycloakService.getUserRoles();
   }
+
+  getUserName(): string {
+    return this.keycloakService.getUsername();
+  }
+
+  getUserIcon(): any {
+    // return this.keycloakService.getUserIcon();
+  }
+
+
 }
