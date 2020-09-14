@@ -1,0 +1,925 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeTestPageComponent should match snapshot 1`] = `
+<wl-theme-test-page>
+  <div
+    class="theme-test-page"
+  >
+    <section>
+      <div
+        class="example-label"
+      >
+        Basic
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <button
+          class="mat-focus-indicator mat-button mat-button-base"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Basic
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-button mat-button-base mat-primary"
+          color="primary"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Primary
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-button mat-button-base mat-accent"
+          color="accent"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Accent
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-button mat-button-base mat-warn"
+          color="warn"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Warn
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-button mat-button-base mat-button-disabled"
+          disabled="true"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Disabled
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <a
+          aria-disabled="false"
+          class="mat-focus-indicator mat-button mat-button-base"
+          href="https://www.google.com/"
+          mat-button=""
+          tabindex="0"
+          target="_blank"
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Link
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </a>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        Raised
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <button
+          class="mat-focus-indicator mat-raised-button mat-button-base"
+          mat-raised-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Basic
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-raised-button mat-button-base mat-primary"
+          color="primary"
+          mat-raised-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Primary
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-raised-button mat-button-base mat-accent"
+          color="accent"
+          mat-raised-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Accent
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-raised-button mat-button-base mat-warn"
+          color="warn"
+          mat-raised-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Warn
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-raised-button mat-button-base mat-button-disabled"
+          disabled="true"
+          mat-raised-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Disabled
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <a
+          aria-disabled="false"
+          class="mat-focus-indicator mat-raised-button mat-button-base"
+          href="https://www.google.com/"
+          mat-raised-button=""
+          tabindex="0"
+          target="_blank"
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Link
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </a>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        Stroked
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <button
+          class="mat-focus-indicator mat-stroked-button mat-button-base"
+          mat-stroked-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Basic
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-stroked-button mat-button-base mat-primary"
+          color="primary"
+          mat-stroked-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Primary
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-stroked-button mat-button-base mat-accent"
+          color="accent"
+          mat-stroked-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Accent
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-stroked-button mat-button-base mat-warn"
+          color="warn"
+          mat-stroked-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Warn
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-stroked-button mat-button-base mat-button-disabled"
+          disabled="true"
+          mat-stroked-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Disabled
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <a
+          aria-disabled="false"
+          class="mat-focus-indicator mat-stroked-button mat-button-base"
+          href="https://www.google.com/"
+          mat-stroked-button=""
+          tabindex="0"
+          target="_blank"
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Link
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </a>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        Flat
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <button
+          class="mat-focus-indicator mat-flat-button mat-button-base"
+          mat-flat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Basic
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-flat-button mat-button-base mat-primary"
+          color="primary"
+          mat-flat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Primary
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-flat-button mat-button-base mat-accent"
+          color="accent"
+          mat-flat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Accent
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-flat-button mat-button-base mat-warn"
+          color="warn"
+          mat-flat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Warn
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <button
+          class="mat-focus-indicator mat-flat-button mat-button-base mat-button-disabled"
+          disabled="true"
+          mat-flat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Disabled
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </button>
+        <a
+          aria-disabled="false"
+          class="mat-focus-indicator mat-flat-button mat-button-base"
+          href="https://www.google.com/"
+          mat-flat-button=""
+          tabindex="0"
+          target="_blank"
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Link
+          </span>
+          <div
+            class="mat-button-ripple mat-ripple"
+            matripple=""
+          />
+          <div
+            class="mat-button-focus-overlay"
+          />
+        </a>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        Icon
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <div
+          class="example-flex-container"
+        >
+          <button
+            aria-label="Example icon button with a vertical three dot icon"
+            class="mat-focus-indicator mat-icon-button mat-button-base"
+            mat-icon-button=""
+          >
+            <span
+              class="mat-button-wrapper"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-icon-no-color"
+                role="img"
+              >
+                more_vert
+              </mat-icon>
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple mat-button-ripple-round"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+          <button
+            aria-label="Example icon button with a home icon"
+            class="mat-focus-indicator mat-icon-button mat-button-base mat-primary"
+            color="primary"
+            mat-icon-button=""
+          >
+            <span
+              class="mat-button-wrapper"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-icon-no-color"
+                role="img"
+              >
+                home
+              </mat-icon>
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple mat-button-ripple-round"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+          <button
+            aria-label="Example icon button with a menu icon"
+            class="mat-focus-indicator mat-icon-button mat-button-base mat-accent"
+            color="accent"
+            mat-icon-button=""
+          >
+            <span
+              class="mat-button-wrapper"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-icon-no-color"
+                role="img"
+              >
+                menu
+              </mat-icon>
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple mat-button-ripple-round"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+          <button
+            aria-label="Example icon button with a heart icon"
+            class="mat-focus-indicator mat-icon-button mat-button-base mat-warn"
+            color="warn"
+            mat-icon-button=""
+          >
+            <span
+              class="mat-button-wrapper"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-icon-no-color"
+                role="img"
+              >
+                favorite
+              </mat-icon>
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple mat-button-ripple-round"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+          <button
+            aria-label="Example icon button with a open in new tab icon"
+            class="mat-focus-indicator mat-icon-button mat-button-base mat-button-disabled"
+            disabled="true"
+            mat-icon-button=""
+          >
+            <span
+              class="mat-button-wrapper"
+            >
+              <mat-icon
+                aria-hidden="true"
+                class="mat-icon notranslate material-icons mat-icon-no-color"
+                role="img"
+              >
+                open_in_new
+              </mat-icon>
+            </span>
+            <div
+              class="mat-button-ripple mat-ripple mat-button-ripple-round"
+              matripple=""
+            />
+            <div
+              class="mat-button-focus-overlay"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        FAB
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <div
+          class="example-flex-container"
+        >
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a delete icon"
+              class="mat-focus-indicator mat-fab mat-button-base mat-primary"
+              color="primary"
+              mat-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  delete
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a bookmark icon"
+              class="mat-focus-indicator mat-fab mat-button-base mat-accent"
+              color="accent"
+              mat-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  bookmark
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a home icon"
+              class="mat-focus-indicator mat-fab mat-button-base mat-warn"
+              color="warn"
+              mat-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  home
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a heart icon"
+              class="mat-focus-indicator mat-fab mat-button-base mat-accent mat-button-disabled"
+              disabled="true"
+              mat-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  favorite
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <section>
+      <div
+        class="example-label"
+      >
+        Mini FAB
+      </div>
+      <div
+        class="example-button-row"
+      >
+        <div
+          class="example-flex-container"
+        >
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a menu icon"
+              class="mat-focus-indicator mat-mini-fab mat-button-base mat-primary"
+              color="primary"
+              mat-mini-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  menu
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a plus one icon"
+              class="mat-focus-indicator mat-mini-fab mat-button-base mat-accent"
+              color="accent"
+              mat-mini-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  plus_one
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a filter list icon"
+              class="mat-focus-indicator mat-mini-fab mat-button-base mat-warn"
+              color="warn"
+              mat-mini-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  filter_list
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+          <div
+            class="example-button-container"
+          >
+            <button
+              aria-label="Example icon button with a home icon"
+              class="mat-focus-indicator mat-mini-fab mat-button-base mat-accent mat-button-disabled"
+              disabled="true"
+              mat-mini-fab=""
+            >
+              <span
+                class="mat-button-wrapper"
+              >
+                <mat-icon
+                  aria-hidden="true"
+                  class="mat-icon notranslate material-icons mat-icon-no-color"
+                  role="img"
+                >
+                  home
+                </mat-icon>
+              </span>
+              <div
+                class="mat-button-ripple mat-ripple mat-button-ripple-round"
+                matripple=""
+              />
+              <div
+                class="mat-button-focus-overlay"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</wl-theme-test-page>
+`;

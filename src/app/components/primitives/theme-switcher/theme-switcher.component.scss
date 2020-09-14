@@ -1,0 +1,27 @@
+/deep/ .mat-slide-toggle:not(.mat-disabled) {
+
+  .mat-slide-toggle-bar {
+    background-color: #fff;
+  }
+
+  .mat-slide-toggle-thumb {
+    background-color: #fff;
+    border: 2px solid #424242;
+  }
+
+  &.mat-checked {
+
+    .mat-slide-toggle-bar {
+      background-color: #424242;
+    }
+
+    .mat-slide-toggle-thumb {
+      background-color: #424242;
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.theme-switcher {
+  display: flex;
+}
