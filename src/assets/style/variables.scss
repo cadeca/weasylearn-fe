@@ -1,9 +1,5 @@
 //to be filled with  values used all over the application
-
 $wl-primary: #4b97a4;
-
-$wl-box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.16);
-$wl-header-height: 40px;
 
 $elevation-shadow-not-on-top-8px: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 8px 8px 0 rgba(0, 0, 0, 0.12);
 $elevation-shadow-16px: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 16px 0 rgba(0, 0, 0, 0.12);
@@ -39,3 +35,21 @@ $primary-medium-gradient: linear-gradient(225deg, #00796b 0%, $wl-primary 100%);
 $primary-light-gradient: linear-gradient(225deg, $wl-primary 0%, #80cbc4 100%);
 $blue-extra-light-gradient: linear-gradient(225deg, #9eb1c5 0%, #e0e6ee 100%);
 $blue-ultra-light-gradient: linear-gradient(225deg, #e0e6ee 0%, #f4f4f4 100%);
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1900px;
+
+$xs-max: 575px;
+$sm-max: 767px;
+$md-max: 991px;
+$lg-max: 1199px;
+$xl-max: 1899px;
+
+$wl-box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.16);
+$wl-header-height: 40px;
+$sidebarMinWidth: 50px;
+$sidebarDefaultWidth: 200px;

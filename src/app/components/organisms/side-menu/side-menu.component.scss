@@ -9,9 +9,32 @@
 }
 
 .side-bar {
-  width: 200px;
+  width: $sidebarDefaultWidth;
+  min-width: $sidebarMinWidth;
   height: 100%;
-  overflow: unset;
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  overflow: hidden;
+
+  .side-bar-resize-button {
+    visibility: hidden;
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    cursor: w-resize;
+  }
+
+  &:hover {
+
+    .side-bar-resize-button {
+      visibility: visible;
+    }
+  }
 }
 
 /deep/ .side-bar {
@@ -32,9 +55,15 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $md) {
 
   .side-bar {
-    width: 50px;
+    width: $sidebarMinWidth;
+    min-width: $sidebarMinWidth;
+    max-width: $sidebarMinWidth;
+
+    .side-bar-resize-button {
+      display: none;
+    }
   }
 }

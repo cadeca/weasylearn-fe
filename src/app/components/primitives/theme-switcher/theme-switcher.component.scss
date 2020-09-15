@@ -4,10 +4,13 @@
 
   .mat-slide-toggle-bar {
     background-color: #fff;
+    border: 1px solid #424242;
   }
 
   .mat-slide-toggle-thumb {
     background-color: #fff;
+    height: 18px;
+    width: 18px;
     border: 2px solid #424242;
   }
 
@@ -15,6 +18,7 @@
 
     .mat-slide-toggle-bar {
       background-color: #424242;
+      border: 1px solid #fff;
     }
 
     .mat-slide-toggle-thumb {
@@ -26,31 +30,26 @@
 
 .theme-switcher {
   display: flex;
-  justify-content: center;
-  background-color: $wl-primary;
+  flex-direction: column;
 
   > div {
     width: 50%;
     display: flex;
-    justify-content: center;
 
     &:hover {
       cursor: pointer;
     }
 
-    &:first-child {
-      border-right: 1px solid #fff;
-    }
-
     .icon {
-      color: #fff;
+      padding-left: 6px;
       width: 100%;
-      text-align: center;
     }
   }
 }
 
 /deep/ .mat-slide-toggle {
+  height: 50px !important;
+  transform: rotate(90deg);
 
   label {
     margin: 0;
