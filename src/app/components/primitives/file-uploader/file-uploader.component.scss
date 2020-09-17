@@ -1,0 +1,54 @@
+@import "src/assets/style/variables";
+
+.drop-area-container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.drop-area,
+.drop-area-overlay {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+}
+
+.drop-area-overlay {
+  border: 1px solid $body-font-color--secondary;
+  background-color: #f7f9fc;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0.4375rem 1.125rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.drop-area {
+  opacity: 0;
+  z-index: 1;
+}
+
+.file-name {
+  padding: 3px;
+  margin: 3px;
+  display: flex;
+  justify-content: space-between;
+
+  .remove-button {
+    margin: 0 10px;
+    transition: 0.5s color;
+  }
+
+  &:hover {
+    box-shadow: $wl-box-shadow;
+  }
+}

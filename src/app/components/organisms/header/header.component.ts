@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../../providers/auth.service';
 import {KeycloakService} from 'keycloak-angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'wl-header',
@@ -10,7 +11,9 @@ import {KeycloakService} from 'keycloak-angular';
 export class HeaderComponent implements OnInit {
   username: string;
   image: File = null;
-  constructor(private keycloakService: KeycloakService, private authService: AuthService) {
+  constructor(private keycloakService: KeycloakService,
+              private authService: AuthService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -22,7 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   profilePage(): void {
-    this.authService.goToProfilePage();
+    this.router.navigate(['/home/profile']);
   }
 
 }

@@ -17,3 +17,8 @@ export interface SidebarEntry {
   whitelistedRoles: string[];
   children?: SidebarEntry[];
 }
+
+export interface User {
+  firstName: string;
+  lastName: string;
+}

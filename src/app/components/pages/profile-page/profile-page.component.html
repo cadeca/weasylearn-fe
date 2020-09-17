@@ -1,0 +1,29 @@
+<div class="profile-page">
+  <h1>{{ 'profilePage.profile' | translate }}</h1>
+  <div class="row d-flex justify-content-end">
+    <button mat-raised-button color="accent" class="add-subject" aria-label="View Profile" (click)="viewProfile()">
+      <mat-icon>person</mat-icon>
+      {{ 'profilePage.editProfile' | translate }}
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-12" *ngIf="userProfile">
+      <div class="row">
+        <label>{{ 'profilePage.firstName' | translate }}:</label>
+        {{ userProfile.firstName }}
+      </div>
+      <div class="row">
+        <label>{{ 'profilePage.lastName' | translate }}:</label>
+        {{ userProfile.lastName }}}
+      </div>
+    </div>
+    <div class="col-12">
+      <h6>Upload your user profile picture</h6>
+      <wl-file-uploader [extensions]="['jpg', 'jpeg', 'png', 'img']"
+                          [accept]="'.jpg, .jpeg, .png, .img'"
+                          (filesChange)="onImageSelected($event)"
+                          [multiple]="false"
+                          id="inputProfile"></wl-file-uploader>
+    </div>
+  </div>
+</div>

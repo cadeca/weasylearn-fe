@@ -16,5 +16,11 @@
   "subjectsPage": {
     "title": "Pagina de Subjects functioneaza",
     "addSubject": "Adauga curs"
+  },
+  "profilePage": {
+    "profile": "Profilul meu",
+    "editProfile": "Editeaza profil Keycloak",
+    "firstName": "Prenume",
+    "lastName": "Nume"
   }
 }
