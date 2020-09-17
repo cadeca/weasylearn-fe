@@ -10,7 +10,7 @@ export class CourseService {
   }
 
   getAllCourseSubjects(): Observable<CourseSubject[]> {
-    return this.httpService.get('subject');
+    return this.httpService.get('subject/all');
   }
 
   getCourseSubjectById(courseID: string): Observable<CourseSubject> {
@@ -23,5 +23,9 @@ export class CourseService {
 
   exportCourseSubject(courseID: string): Observable<CourseSubject> {
     return this.httpService.get('subject/export?subjectID=' + courseID);
+  }
+
+  saveCourseSubject(subject: CourseSubject): Observable<any> {
+    return this.httpService.put('subject', subject);
   }
 }

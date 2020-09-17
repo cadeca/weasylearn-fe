@@ -14,8 +14,8 @@ const routes: Routes = [
       {path: 'theme', component: ThemeTestPageComponent, canActivate: [AuthGuard], data: {roles: ['app-developer']}},
     ]
   },
-  {path: '**', redirectTo: '/home', pathMatch: 'full'},
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {path: '**', redirectTo: '/home/subjects', pathMatch: 'full'},
+  {path: '', redirectTo: '/home/subjects', pathMatch: 'full'}
 ];
 
 @NgModule({

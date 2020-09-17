@@ -1,0 +1,38 @@
+<div class="subjects-list">
+  <mat-list role="list">
+    <mat-list-item role="listitem" class="list-headline">
+      <div class="subject-entry row font-weight-bold">
+        <div class="col-2">
+          Code
+        </div>
+        <div class="col-4">
+          Name
+        </div>
+        <div class="col-5">
+          Description
+        </div>
+        <div class="col-1">
+          Semester
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-list-item role="listitem" *ngFor="let subject of visibleSubjects">
+      <div class="subject-entry row">
+        <div class="col-2">
+          {{ subject.code }}
+        </div>
+        <div class="col-4">
+          {{ subject.name }}
+        </div>
+        <div class="col-5">
+          {{ subject.description }}
+        </div>
+        <div class="col-1">
+          {{ subject.semester }}
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-list-item role="listitem" *ngIf="!visibleSubjects || !visibleSubjects.length">No subject available</mat-list-item>
+  </mat-list>
+
+</div>

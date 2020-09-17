@@ -6,6 +6,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
 }
 
 .side-bar {
@@ -13,9 +14,11 @@
   min-width: $sidebarMinWidth;
   height: 100%;
   border: none;
-  position: absolute;
+  //position: absolute;
+  position: relative;
   background-color: transparent;
   overflow: hidden;
+  padding: 3rem 0;
 
   .side-bar-resize-button {
     visibility: hidden;
@@ -37,7 +40,13 @@
   }
 }
 
-/deep/ .side-bar {
+/deep/ .side-menu {
+
+  .mat-sidenav-content {
+    margin-left: 0 !important;
+    display: flex;
+    flex: 1;
+  }
 
   .mat-drawer-inner-container {
     display: flex;
@@ -53,6 +62,11 @@
       margin-bottom: 0;
     }
   }
+}
+
+.page-container {
+  padding: 3rem;
+  width: 100%;
 }
 
 @media screen and (max-width: $md) {

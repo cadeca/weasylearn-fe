@@ -1,0 +1,15 @@
+<div class="subjects-page">
+  <div class="row d-flex justify-content-between">
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="SubjectName" [(ngModel)]="searchField">
+      </mat-form-field>
+      <button mat-raised-button color="accent" class="add-subject" aria-label="Add Subject" (click)="addSubject()">
+        <mat-icon>plus_one</mat-icon>
+<!--        TODO translate me-->
+        Add subject
+      </button>
+  </div>
+ <div class="row">
+   <wl-subjects-list [subjects]="subjects" class="subjects-list" [searchField]="searchField"></wl-subjects-list>
+ </div>
+</div>

@@ -11,10 +11,14 @@ import {PrimitivesModule} from '../primitives/primitives.module';
 import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
+import {SubjectsListComponent} from './subjects-list/subjects-list.component';
+import {CreateSubjectDialogComponent} from './create-subject-dialog/create-subject-dialog.component';
 
 const components = [
   HeaderComponent,
-  SideMenuComponent
+  SideMenuComponent,
+  SubjectsListComponent,
+  CreateSubjectDialogComponent
 ];
 
 @NgModule({
