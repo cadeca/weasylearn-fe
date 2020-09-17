@@ -1,9 +1,20 @@
 {
+  "general": {
+    "name": "Nume",
+    "code": "Cod",
+    "semester": "Semestru",
+    "description": "Descriere"
+  },
+  "header": {
+    "profile": "Profil",
+    "logout": "Logout"
+  },
   "homePage": {
     "title": "Bine ai venit la WeasyLearn!",
     "findOutMore": "Click pentru a afla mai multe!"
   },
   "subjectsPage": {
-    "title": "Pagina de Subjects functioneaza"
+    "title": "Pagina de Subjects functioneaza",
+    "addSubject": "Adauga curs"
   }
 }

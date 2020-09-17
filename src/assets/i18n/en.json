@@ -1,9 +1,20 @@
 {
+  "general": {
+    "name": "Name",
+    "code": "Code",
+    "semester": "Semester",
+    "description": "Description"
+  },
+  "header": {
+    "profile": "Profile",
+    "logout": "Logout"
+  },
   "homePage": {
     "title": "Welcome to WeasyLearn!",
     "findOutMore": "Click to find out more!"
   },
   "subjectsPage": {
-    "title": "SubjectsPage works"
+    "title": "SubjectsPage works",
+    "addSubject": "Add subject"
   }
 }
