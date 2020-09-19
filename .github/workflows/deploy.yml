@@ -73,7 +73,7 @@ jobs:
 
       - name: copy profile from envs repo
         run: |
-          cp waesylearn-envs/${{ steps.prep.outputs.environment }}/frontend/environment.prod.ts src/environments/environment.prod.ts
+          cp weasylearn-envs/${{ steps.prep.outputs.environment }}/frontend/environment.prod.ts src/environments/environment.prod.ts
 
       - name: npm install and npm run build prod
         run: |
