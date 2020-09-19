@@ -6,14 +6,15 @@ import {KeycloakConfig, KeycloakInitOptions} from 'keycloak-js';
 import {KeycloakOptions} from 'keycloak-angular';
 
 const keycloakConfig: KeycloakConfig = {
-  url: 'http://localhost:9999/auth',
-  realm: 'weasylearn',
+  url: 'https://accounts.weasylearn.ro/auth',
+  realm: 'weasylearn-local',
   clientId: 'weasylearn-fe'
 };
 
 const keycloakInitOptions: KeycloakInitOptions = {
   onLoad: 'login-required',
-  checkLoginIframe: false
+  checkLoginIframe: false,
+  pkceMethod: 'S256'
 };
 
 const keycloakOptions: KeycloakOptions = {
