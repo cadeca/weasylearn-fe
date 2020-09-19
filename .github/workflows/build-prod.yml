@@ -28,6 +28,33 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: Prepare
+        id: prep
+        run: |
+          BASE_BRANCH=${{ github.base_ref }}
+          ENVIRONMENT=noop
+          if [ "master" = "$BASE_BRANCH" ]; then
+            ENVIRONMENT=stage
+          elif [ "develop" = "$BASE_BRANCH" ]; then
+            ENVIRONMENT=dev
+          elif [[ $BASE_BRANCH == release/* ]]; then
+            ENVIRONMENT=prod
+          fi
+
+          echo ::set-output name=environment::${ENVIRONMENT}
+
+      - name: chekcout envs repo
+        uses: actions/checkout@master
+        with:
+          repository: cadeca/weasylearn-envs
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: weasylearn-envs
+
+      - name: copy profile from envs repo
+        run: |
+          cp weasylearn-envs/${{ steps.prep.outputs.environment }}/frontend/environment.prod.ts src/environments/environment.prod.ts
+
       - name: npm install and npm run build prod
         run: |
           npm i
