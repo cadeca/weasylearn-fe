@@ -9,11 +9,15 @@ import {ThemeSwitcherComponent} from './theme-switcher/theme-switcher.component'
 import {TranslateModule} from '@ngx-translate/core';
 import {SideMenuEntryComponent} from './side-menu-entry/side-menu-entry.component';
 import {FileUploaderComponent} from './file-uploader/file-uploader.component';
+import {LanguageToggleComponent} from './language-toggle/language-toggle.component';
+import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
 
 const components = [
   ThemeSwitcherComponent,
   SideMenuEntryComponent,
-  FileUploaderComponent
+  FileUploaderComponent,
+  LanguageToggleComponent,
+  UserProfileMenuComponent
 ];
 
 @NgModule({

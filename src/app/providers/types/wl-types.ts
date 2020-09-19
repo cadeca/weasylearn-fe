@@ -19,6 +19,9 @@ export interface SidebarEntry {
 }
 
 export interface User {
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
+  username?: string;
+  email: string;
+  type?: string;
 }

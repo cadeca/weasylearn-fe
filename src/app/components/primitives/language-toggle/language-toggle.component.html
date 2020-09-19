@@ -1,0 +1,5 @@
+<button mat-button [matMenuTriggerFor]="languageMenu" class="languageMenu">{{ currentLanguage.toUpperCase() }}</button>
+<mat-menu #languageMenu="matMenu">
+  <button mat-menu-item (click)="setLanguage('ro')">RO</button>
+  <button mat-menu-item (click)="setLanguage('en')">EN</button>
+</mat-menu>

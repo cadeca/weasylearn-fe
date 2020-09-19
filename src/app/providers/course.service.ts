@@ -10,7 +10,7 @@ export class CourseService {
   }
 
   getAllCourseSubjects(): Observable<CourseSubject[]> {
-    return this.httpService.get('subject/all');
+    return this.httpService.get('subject');
   }
 
   getCourseSubjectById(courseID: string): Observable<CourseSubject> {

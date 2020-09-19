@@ -9,7 +9,14 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent {
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('ro');
-    translate.use('ro');
+    const savedLanguage = localStorage.getItem('currentLanguage');
+    if (savedLanguage) {
+      translate.setDefaultLang(savedLanguage);
+      translate.use(savedLanguage);
+    } else {
+      translate.setDefaultLang('ro');
+      translate.use('ro');
+      localStorage.setItem('currentLanguage', 'ro');
+    }
   }
 }

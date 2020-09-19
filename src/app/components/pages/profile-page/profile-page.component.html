@@ -6,15 +6,29 @@
       {{ 'profilePage.editProfile' | translate }}
     </button>
   </div>
-  <div class="row">
-    <div class="col-12" *ngIf="userProfile">
-      <div class="row">
-        <label>{{ 'profilePage.firstName' | translate }}:</label>
-        {{ userProfile.firstName }}
+  <div class="row no-gutters">
+    <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.firstName' | translate }}: </h6>
+        <span>{{ userProfile.firstName }}</span>
       </div>
-      <div class="row">
-        <label>{{ 'profilePage.lastName' | translate }}:</label>
-        {{ userProfile.lastName }}}
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.lastName' | translate }}: </h6>
+        <span>{{ userProfile.lastName }}</span>
+      </div>
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.username' | translate }}: </h6>
+        <span>{{ userProfile.username }}</span>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.email' | translate }}: </h6>
+        <span>{{ userProfile.email }}</span>
+      </div>
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.type' | translate }}: </h6>
+        <span>{{ userProfile.type }}</span>
       </div>
     </div>
     <div class="col-12">

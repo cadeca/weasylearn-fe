@@ -10,15 +10,15 @@ export class UserService {
   }
 
   getProfile(): Observable<User> {
-    return this.httpService.get('user/current');
+    return this.httpService.get('user/profile');
   }
 
   getProfileImage(): Observable<File> {
-    return this.httpService.get('user/current/image');
+    return this.httpService.get('user/profile/image');
   }
 
   setProfileImage(file): Observable<any> {
-    return this.httpService.post('user/current/image', file);
+    return this.httpService.post('user/profile/image', file);
   }
 
 

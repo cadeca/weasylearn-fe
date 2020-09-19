@@ -1,0 +1,17 @@
+.profile {
+  padding: 0 0.5rem;
+  display: flex;
+
+  .image-container {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
