@@ -34,13 +34,10 @@ jobs:
         run: |
           BASE_BRANCH=${{ github.base_ref }}
           ENVIRONMENT=noop
-          echo $BASE_BRANCH
-          BASE_BRANCH=$(echo ${BASE_BRANCH#refs/heads/})
-          echo $BASE_BRANCH
           if [ "master" = "$BASE_BRANCH" ]; then
             ENVIRONMENT=stage
           elif [ "develop" = "$BASE_BRANCH" ]; then
-            ENVIRNOMENT=dev
+            ENVIRONMENT=dev
           elif [[ $BASE_BRANCH == release/* ]]; then
             ENVIRONMENT=prod
           fi
