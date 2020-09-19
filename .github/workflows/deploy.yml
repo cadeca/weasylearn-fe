@@ -30,46 +30,46 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Prepare
-          id: prep
-          run: |
-            DOCKER_IMAGE=weasylearn/weasylearn-frontend
-            VERSION=noop
-            ENVIRONMENT=noop
-            if [[ $GITHUB_REF == refs/heads/* ]]; then
-              VERSION=$(echo ${GITHUB_REF#refs/heads/})
-              if [ "master" = "$VERSION" ]; then
-                VERSION=stage
-                ENVIRONMENT=stage
-              elif [ "develop" = "$VERSION" ]; then
-                VERSION=dev
-                ENVIRNOMENT=dev
-              elif [[ $VERSION == release/* ]]; then
-                VERSION=$(echo ${VERSION#release/})
-                ENVIRONMENT=prod
-              fi
+        id: prep
+        run: |
+          DOCKER_IMAGE=weasylearn/weasylearn-frontend
+          VERSION=noop
+          ENVIRONMENT=noop
+          if [[ $GITHUB_REF == refs/heads/* ]]; then
+            VERSION=$(echo ${GITHUB_REF#refs/heads/})
+            if [ "master" = "$VERSION" ]; then
+              VERSION=stage
+              ENVIRONMENT=stage
+            elif [ "develop" = "$VERSION" ]; then
+              VERSION=dev
+              ENVIRNOMENT=dev
+            elif [[ $VERSION == release/* ]]; then
+              VERSION=$(echo ${VERSION#release/})
+              ENVIRONMENT=prod
             fi
-            if [[ $VERSION == v-* ]]; then
-              VERSION=$(echo ${VERSION#v-})
-              TAGS="${DOCKER_IMAGE}:v-${VERSION},${DOCKER_IMAGE}:${VERSION}"
-            fi
-            TAGS="${DOCKER_IMAGE}:${VERSION}"
-            TAGS="$TAGS,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
-            if [[ $VERSION =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-              MINOR=${VERSION%.*}
-              MAJOR=${MINOR%.*}
-              TAGS="$TAGS,${DOCKER_IMAGE}:v-${MINOR},${DOCKER_IMAGE}:${MINOR},${DOCKER_IMAGE}:v-${MAJOR},${DOCKER_IMAGE}:${MAJOR},${DOCKER_IMAGE}:latest"
-            fi
-            echo ::set-output name=version::${VERSION}
-            echo ::set-output name=environment::${ENVIRONMENT}
-            echo ::set-output name=tags::${TAGS}
-            echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          fi
+          if [[ $VERSION == v-* ]]; then
+            VERSION=$(echo ${VERSION#v-})
+            TAGS="${DOCKER_IMAGE}:v-${VERSION},${DOCKER_IMAGE}:${VERSION}"
+          fi
+          TAGS="${DOCKER_IMAGE}:${VERSION}"
+          TAGS="$TAGS,${DOCKER_IMAGE}:sha-${GITHUB_SHA::8}"
+          if [[ $VERSION =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+            MINOR=${VERSION%.*}
+            MAJOR=${MINOR%.*}
+            TAGS="$TAGS,${DOCKER_IMAGE}:v-${MINOR},${DOCKER_IMAGE}:${MINOR},${DOCKER_IMAGE}:v-${MAJOR},${DOCKER_IMAGE}:${MAJOR},${DOCKER_IMAGE}:latest"
+          fi
+          echo ::set-output name=version::${VERSION}
+          echo ::set-output name=environment::${ENVIRONMENT}
+          echo ::set-output name=tags::${TAGS}
+          echo ::set-output name=created::$(date -u +'%Y-%m-%dT%H:%M:%SZ')
 
       - name: chekcout envs repo
-          uses: actions/checkout@master
-          whit:
-            repository: cadeca/weasylearn-envs
-            token: ${{ secrets.API_TOKEN_GITHUB }}
-            path: weasylearn-envs
+        uses: actions/checkout@master
+        whit:
+          repository: cadeca/weasylearn-envs
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: weasylearn-envs
 
       - name: copy profile from envs repo
         run: |
