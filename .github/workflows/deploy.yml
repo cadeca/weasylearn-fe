@@ -32,7 +32,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=weasylearn/weasylearn-frontend
+          DOCKER_IMAGE=registry.weasylearn.ro/weasylearn/weasylearn-frontend
           VERSION=noop
           ENVIRONMENT=noop
           if [[ $GITHUB_REF == refs/heads/* ]]; then
