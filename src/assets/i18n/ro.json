@@ -9,13 +9,25 @@
     "profile": "Profil",
     "logout": "Logout"
   },
+  "sidebar": {
+    "subjects": "Subiecte",
+    "questionBank": "Banca de intrebari",
+    "createTest": "Porneste test",
+    "grading": "Note",
+    "testTemplates": "Sablon de test"
+  },
   "homePage": {
     "title": "Bine ai venit la WeasyLearn!",
     "findOutMore": "Click pentru a afla mai multe!"
   },
   "subjectsPage": {
     "title": "Pagina de Subjects functioneaza",
-    "addSubject": "Adauga curs"
+    "addSubject": "Adauga curs",
+    "code": "Cod",
+    "name": "Nume",
+    "description": "Descriere",
+    "semester": "Semestru",
+    "noSubjects": "Nici un curs valabil"
   },
   "profilePage": {
     "profile": "Profilul meu",

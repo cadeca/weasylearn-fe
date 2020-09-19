@@ -4,7 +4,7 @@
       class="icon">
       {{ sidebarEntry.icon }}
     </mat-icon>
-    <h6 class="d-none d-md-block">{{ sidebarEntry.code | translate }}</h6>
+    <h6 class="d-none d-md-block">{{ 'sidebar.' + sidebarEntry.code | translate }}</h6>
     <mat-icon
       *ngIf="sidebarEntry.children && sidebarEntry.children.length"
       class="icon dropdown-icon"

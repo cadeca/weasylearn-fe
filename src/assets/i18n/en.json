@@ -9,13 +9,25 @@
     "profile": "Profile",
     "logout": "Logout"
   },
+  "sidebar": {
+    "subjects": "Subjects",
+    "questionBank": "Question Bank",
+    "createTest": "Create test",
+    "grading": "Grading",
+    "testTemplates": "Test template"
+  },
   "homePage": {
     "title": "Welcome to WeasyLearn!",
     "findOutMore": "Click to find out more!"
   },
   "subjectsPage": {
     "title": "SubjectsPage works",
-    "addSubject": "Add subject"
+    "addSubject": "Add subject",
+    "code": "Code",
+    "name": "Name",
+    "description": "Description",
+    "semester": "Semester",
+    "noSubjects": "No Subject available"
   },
   "profilePage": {
     "profile": "My Profile",
