@@ -1,4 +1,4 @@
-name: Build & Deploy To Firebase
+name: Build & Deploy To Docker Registry
 
 on:
   push:
