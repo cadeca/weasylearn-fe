@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpService} from './Http.service';
 import {Observable} from 'rxjs';
 import {CourseSubject} from './types/wl-types';
@@ -10,7 +10,7 @@ export class CourseService {
   }
 
   getAllCourseSubjects(): Observable<CourseSubject[]> {
-    return this.httpService.get('subject/all');
+    return this.httpService.get('subject');
   }
 
   getCourseSubjectById(courseID: string): Observable<CourseSubject> {

@@ -1,15 +1,14 @@
-import { Injectable } from '@angular/core';
-// import {environment} from '../../environments/environment';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
-export class HttpService  {
+export class HttpService {
 
-  // private backendurl = environment.apiUrl;
-  private backendurl = '/api';
+  private backendUrl = environment.apiUrl;
 
   constructor(private httpClient: HttpClient) {
   }
@@ -36,10 +35,10 @@ export class HttpService  {
 
   public getFullURL(path: string): string {
     if (path.startsWith('/')) {
-      return this.backendurl + path;
+      return this.backendUrl + path;
     }
 
-    return this.backendurl + '/' + path;
+    return this.backendUrl + '/' + path;
   }
 
 
