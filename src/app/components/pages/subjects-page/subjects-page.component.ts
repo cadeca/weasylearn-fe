@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CourseService} from '../../../providers/course.service';
 import {CourseSubject} from '../../../providers/types/wl-types';
 import {MatDialog} from '@angular/material/dialog';
-import {CreateSubjectDialogComponent} from '../../organisms/create-subject-dialog/create-subject-dialog.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'wl-subjects-page',
@@ -13,7 +13,7 @@ export class SubjectsPageComponent implements OnInit {
   subjects: CourseSubject[];
   searchField: string;
 
-  constructor(private courseService: CourseService, public dialog: MatDialog) {
+  constructor(private courseService: CourseService, public dialog: MatDialog, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -21,15 +21,7 @@ export class SubjectsPageComponent implements OnInit {
   }
 
   addSubject(): void {
-    const dialogRef = this.dialog.open(CreateSubjectDialogComponent);
-
-    dialogRef.componentInstance.createSubject.subscribe(subject => {
-      if (subject) {
-        this.courseService.saveCourseSubject(subject).subscribe(() => {
-          this.getAllSubjects();
-        });
-      }
-    });
+    this.router.navigate(['/home/subject']);
   }
 
   private getAllSubjects(): void {

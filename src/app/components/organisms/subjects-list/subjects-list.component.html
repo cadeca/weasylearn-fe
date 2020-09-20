@@ -8,7 +8,7 @@
         <div class="col-4">
           {{ 'subjectsPage.name' | translate }}
         </div>
-        <div class="col-5">
+        <div class="col-4">
           {{ 'subjectsPage.description' | translate }}
         </div>
         <div class="col-1">
@@ -24,11 +24,16 @@
         <div class="col-4">
           {{ subject.name }}
         </div>
-        <div class="col-5">
+        <div class="col-4">
           {{ subject.description }}
         </div>
         <div class="col-1">
           {{ subject.semester }}
+        </div>
+        <div class="col-1">
+          <button mat-icon-button color="accent" aria-label="Edit Subject" (click)="editSubject(subject)">
+            <mat-icon>create</mat-icon>
+          </button>
         </div>
       </div>
     </mat-list-item>

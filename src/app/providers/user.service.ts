@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpService} from './Http.service';
 import {Observable} from 'rxjs';
-import {User} from './types/wl-types';
+import {Teacher, User} from './types/wl-types';
 
 @Injectable()
 export class UserService {
@@ -21,5 +21,11 @@ export class UserService {
     return this.httpService.post('user/profile/image', file);
   }
 
+  getTeachers(): Observable<Teacher[]>  {
+    return this.httpService.get('teacher/all');
+  }
 
+  getStudents(): Observable<Teacher[]>  {
+    return this.httpService.get('student/all');
+  }
 }

@@ -1,12 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {CourseSubject} from '../../../providers/types/wl-types';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'wl-subjects-list',
   templateUrl: './subjects-list.component.html',
   styleUrls: ['./subjects-list.component.scss']
 })
-export class SubjectsListComponent implements OnInit {
+export class SubjectsListComponent {
   visibleSubjects: CourseSubject[] = [];
   private allSubjects: CourseSubject[] = [];
 
@@ -33,9 +34,9 @@ export class SubjectsListComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  editSubject(subject: CourseSubject): void {
+    this.router.navigate(['/home/subject'], { queryParams: { subjectCode: subject.code } });
   }
-
 }

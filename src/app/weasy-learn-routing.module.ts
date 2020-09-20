@@ -5,6 +5,7 @@ import {DashboardPageComponent} from './components/pages/dashboard-page/dashboar
 import {SubjectsPageComponent} from './components/pages/subjects-page/subjects-page.component';
 import {ThemeTestPageComponent} from './components/pages/theme-test-page/theme-test-page.component';
 import {ProfilePageComponent} from './components/pages/profile-page/profile-page.component';
+import {SubjectPageComponent} from './components/pages/subject-page/subject-page.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {path: 'subjects', component: SubjectsPageComponent, data: {roles: ['app-admin', 'app-teacher']}},
+      {path: 'subject', component: SubjectPageComponent, data: {roles: ['app-admin', 'app-teacher']}},
       {path: 'profile', component: ProfilePageComponent, data: {roles: ['app-admin', 'app-teacher', 'app-student']}},
       {path: 'theme', component: ThemeTestPageComponent, canActivate: [AuthGuard], data: {roles: ['app-developer']}},
     ]

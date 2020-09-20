@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-// import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatButtonModule} from '@angular/material/button';
 // import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatCardModule} from '@angular/material/card';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
-// import {MatChipsModule} from '@angular/material/chips';
+import {MatChipsModule} from '@angular/material/chips';
 // import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
@@ -20,7 +20,7 @@ import {MatMenuModule} from '@angular/material/menu';
 // import {MatProgressBarModule} from '@angular/material/progress-bar';
 // import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatRadioModule} from '@angular/material/radio';
-// import {MatSelectModule} from '@angular/material/select';
+import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 // import {MatSliderModule} from '@angular/material/slider';
 // import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -34,12 +34,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
-    // MatAutocompleteModule,
+    MatAutocompleteModule,
     MatButtonModule,
     // MatButtonToggleModule,
     // MatCardModule,
     // MatCheckboxModule,
-    // MatChipsModule,
+    MatChipsModule,
     // MatDatepickerModule,
     MatDialogModule,
     MatDividerModule,
@@ -56,7 +56,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     // MatProgressSpinnerModule,
     // MatRadioModule,
     // MatRippleModule,
-    // MatSelectModule,
+    MatSelectModule,
     MatSidenavModule,
     // MatSliderModule,
     MatSlideToggleModule,
@@ -69,12 +69,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     // MatTooltipModule
   ],
   exports: [
-    // MatAutocompleteModule,
+    MatAutocompleteModule,
     MatButtonModule,
     // MatButtonToggleModule,
     // MatCardModule,
     // MatCheckboxModule,
-    // MatChipsModule,
+    MatChipsModule,
     // MatDatepickerModule,
     MatDialogModule,
     MatDividerModule,
@@ -91,7 +91,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     // MatProgressSpinnerModule,
     // MatRadioModule,
     // MatRippleModule,
-    // MatSelectModule,
+    MatSelectModule,
     MatSidenavModule,
     // MatSliderModule,
     MatSlideToggleModule,

@@ -14,12 +14,14 @@ import {MaterialModule} from '../../material.module';
 import {ThemeTestPageComponent} from './theme-test-page/theme-test-page.component';
 import {OrganismsModule} from '../organisms/organisms.module';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
+import {SubjectPageComponent} from './subject-page/subject-page.component';
 
 const components = [
   SubjectsPageComponent,
   DashboardPageComponent,
   ThemeTestPageComponent,
-  ProfilePageComponent
+  ProfilePageComponent,
+  SubjectPageComponent
 ];
 
 @NgModule({

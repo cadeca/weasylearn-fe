@@ -13,12 +13,14 @@ import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
 import {SubjectsListComponent} from './subjects-list/subjects-list.component';
 import {CreateSubjectDialogComponent} from './create-subject-dialog/create-subject-dialog.component';
+import {UsersTableComponent} from './users-table/users-table.component';
 
 const components = [
   HeaderComponent,
   SideMenuComponent,
   SubjectsListComponent,
-  CreateSubjectDialogComponent
+  CreateSubjectDialogComponent,
+  UsersTableComponent
 ];
 
 @NgModule({
