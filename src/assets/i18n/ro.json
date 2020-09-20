@@ -11,18 +11,17 @@
   },
   "sidebar": {
     "subjects": "Subiecte",
-    "questionBank": "Banca de intrebari",
-    "createTest": "Porneste test",
+    "questionBank": "Bancă de întrebări",
+    "createTest": "Pornește test",
     "grading": "Note",
-    "testTemplates": "Sablon de test"
+    "testTemplates": "Șablon de test"
   },
   "homePage": {
     "title": "Bine ai venit la WeasyLearn!",
     "findOutMore": "Click pentru a afla mai multe!"
   },
   "subjectsPage": {
-    "title": "Pagina de Subjects functioneaza",
-    "addSubject": "Adauga curs",
+    "addSubject": "Adaugă curs",
     "code": "Cod",
     "name": "Nume",
     "description": "Descriere",
@@ -31,8 +30,11 @@
   },
   "profilePage": {
     "profile": "Profilul meu",
-    "editProfile": "Editeaza profil Keycloak",
+    "editProfile": "Editează profilul Keycloak",
     "firstName": "Prenume",
-    "lastName": "Nume"
+    "lastName": "Nume",
+    "email": "Email",
+    "type": "Tip",
+    "username": "Nume de utilizator"
   }
 }

@@ -33,6 +33,9 @@
     "profile": "My Profile",
     "editProfile": "Edit Keycloak profile",
     "firstName": "First Name",
-    "lastName": "Last Name"
+    "lastName": "Last Name",
+    "email": "Email",
+    "type": "Type",
+    "username": "Username"
   }
 }
