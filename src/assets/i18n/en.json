@@ -1,9 +1,41 @@
 {
+  "general": {
+    "name": "Name",
+    "code": "Code",
+    "semester": "Semester",
+    "description": "Description"
+  },
+  "header": {
+    "profile": "Profile",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "subjects": "Subjects",
+    "questionBank": "Question Bank",
+    "createTest": "Create test",
+    "grading": "Grading",
+    "testTemplates": "Test template"
+  },
   "homePage": {
     "title": "Welcome to WeasyLearn!",
     "findOutMore": "Click to find out more!"
   },
   "subjectsPage": {
-    "title": "SubjectsPage works"
+    "title": "SubjectsPage works",
+    "addSubject": "Add subject",
+    "code": "Code",
+    "name": "Name",
+    "description": "Description",
+    "semester": "Semester",
+    "noSubjects": "No Subject available"
+  },
+  "profilePage": {
+    "profile": "My Profile",
+    "editProfile": "Edit Keycloak profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "type": "Type",
+    "username": "Username"
   }
 }

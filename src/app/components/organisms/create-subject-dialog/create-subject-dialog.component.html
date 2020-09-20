@@ -1,0 +1,32 @@
+<div class="create-subject-dialog">
+  <h2 mat-dialog-title>Create Subject</h2>
+  <mat-dialog-content class="mat-typography">
+    <form [formGroup]="newSubject">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'general.name' | translate}}</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'general.code' | translate}}</mat-label>
+        <input matInput formControlName="code">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'general.semester' | translate}}</mat-label>
+        <input matInput type="number" formControlName="semester">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'general.description' | translate}}</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button color="primary" mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="accent" [mat-dialog-close]="true"
+            [disabled]="!newSubject.valid" (click)="create()">Create</button>
+  </mat-dialog-actions>
+
+</div>

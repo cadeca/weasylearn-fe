@@ -13,11 +13,13 @@ import {ProvidersModule} from '../../providers/providers.module';
 import {MaterialModule} from '../../material.module';
 import {ThemeTestPageComponent} from './theme-test-page/theme-test-page.component';
 import {OrganismsModule} from '../organisms/organisms.module';
+import {ProfilePageComponent} from './profile-page/profile-page.component';
 
 const components = [
   SubjectsPageComponent,
   DashboardPageComponent,
-  ThemeTestPageComponent
+  ThemeTestPageComponent,
+  ProfilePageComponent
 ];
 
 @NgModule({

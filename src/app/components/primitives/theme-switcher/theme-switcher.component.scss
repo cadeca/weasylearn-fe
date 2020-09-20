@@ -1,11 +1,16 @@
+@import "src/assets/style/variables";
+
 /deep/ .mat-slide-toggle:not(.mat-disabled) {
 
   .mat-slide-toggle-bar {
     background-color: #fff;
+    border: 1px solid #424242;
   }
 
   .mat-slide-toggle-thumb {
     background-color: #fff;
+    height: 18px;
+    width: 18px;
     border: 2px solid #424242;
   }
 
@@ -13,6 +18,7 @@
 
     .mat-slide-toggle-bar {
       background-color: #424242;
+      border: 1px solid #fff;
     }
 
     .mat-slide-toggle-thumb {
@@ -24,4 +30,28 @@
 
 .theme-switcher {
   display: flex;
+  flex-direction: column;
+
+  > div {
+    width: 50%;
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      padding-left: 6px;
+      width: 100%;
+    }
+  }
+}
+
+/deep/ .mat-slide-toggle {
+  height: 50px !important;
+  transform: rotate(90deg);
+
+  label {
+    margin: 0;
+  }
 }

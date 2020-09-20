@@ -1,8 +1,14 @@
 <mat-sidenav-container class="side-menu">
-  <mat-sidenav #sidenav mode="side" opened>
-    <div>Sidenav content</div>
+  <mat-sidenav #resizableMenu mode="side" opened class="side-bar">
+    <div class="side-bar-menu" >
+      <wl-side-menu-entry *ngFor="let sideMenuEntry of currentUserMenuItems" [sidebarEntry]="sideMenuEntry"></wl-side-menu-entry>
+    </div>
+    <wl-theme-switcher class="theme-switcher"></wl-theme-switcher>
+    <div class="side-bar-resize-button" (mousedown)="handleMousedown($event)" (mouseup)="handleMouseUp($event)"></div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <router-outlet></router-outlet>
+    <div class="page-container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

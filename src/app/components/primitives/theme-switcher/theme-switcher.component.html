@@ -1,24 +1,23 @@
 <div class="theme-switcher">
-<div>
-  <mat-icon
-    class="icon"
-    color="warn"
-    [matMenuTriggerFor]="menu">
-    palette
-  </mat-icon>
-  <mat-menu #menu="matMenu">
-    <button
-      mat-menu-item
-      (click)="changeThemeColor('orange-')">
-      Orange
-    </button>
-    <button
-      mat-menu-item
-      (click)="changeThemeColor('magenta-')">
-      Magenta
-    </button>
-  </mat-menu>
-</div>
+  <div>
+    <mat-icon
+      class="icon"
+      [matMenuTriggerFor]="menu">
+      palette
+    </mat-icon>
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        (click)="changeThemeColor('orange-')">
+        Orange
+      </button>
+      <button
+        mat-menu-item
+        (click)="changeThemeColor('magenta-')">
+        Magenta
+      </button>
+    </mat-menu>
+  </div>
   <div>
     <mat-slide-toggle (change)="changeThemeLight($event)" [checked]="darkThemeModeOn"></mat-slide-toggle>
   </div>

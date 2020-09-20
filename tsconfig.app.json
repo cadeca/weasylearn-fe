@@ -14,5 +14,10 @@
     "src",
     "types",
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/setup-jest.ts",
+    "src/**/environment.*.ts"
   ]
 }

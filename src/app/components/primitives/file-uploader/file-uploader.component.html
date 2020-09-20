@@ -1,0 +1,19 @@
+<div class="file-uploader">
+  <div class="drop-area-container">
+    <input (change)="onFileUpload($event)" #inputField class="drop-area" [accept]="accept" type="file" [multiple]="multiple">
+    <div class="drop-area-overlay"
+    >Drag and drop your image <br />
+      or<br />
+      Click to add<br />
+    </div>
+  </div>
+  <div class="text-danger" *ngIf="uploadError">{{ uploadError | translate}}</div>
+  <div class="file-list" *ngIf="files && files.length">
+    <div *ngFor="let uploadedFile of files" class="file-name">
+      {{ uploadedFile.name }}
+      <button mat-button color="warn" class="remove-button" (click)="removeFile(uploadedFile)">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

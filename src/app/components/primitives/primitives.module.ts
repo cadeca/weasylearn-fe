@@ -4,12 +4,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 import {MaterialModule} from '../../material.module';
 import {ThemeSwitcherComponent} from './theme-switcher/theme-switcher.component';
+import {TranslateModule} from '@ngx-translate/core';
+import {SideMenuEntryComponent} from './side-menu-entry/side-menu-entry.component';
+import {FileUploaderComponent} from './file-uploader/file-uploader.component';
+import {LanguageToggleComponent} from './language-toggle/language-toggle.component';
+import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
 
 const components = [
-  ThemeSwitcherComponent
+  ThemeSwitcherComponent,
+  SideMenuEntryComponent,
+  FileUploaderComponent,
+  LanguageToggleComponent,
+  UserProfileMenuComponent
 ];
 
 @NgModule({
@@ -21,8 +29,8 @@ const components = [
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    WeasyLearnRoutingModule,
-    MaterialModule
+    MaterialModule,
+    TranslateModule
   ],
   exports: components,
 })

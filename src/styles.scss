@@ -39,6 +39,15 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl
+);
+
 h1,
 h2,
 h3,
@@ -91,4 +100,8 @@ label {
 
 .hint-text {
   font-size: 12px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

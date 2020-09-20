@@ -1,0 +1,38 @@
+@import "src/assets/style/variables";
+
+.side-menu-entry {
+  text-align: left;
+
+  .entry-definition {
+    display: flex;
+    padding: 0.5rem 0;
+    height: 45px;
+    border-bottom: 1px solid $body-font-color--secondary;
+    overflow: hidden;
+
+    .icon {
+      margin: 0 0.5rem;
+    }
+
+    h6 {
+      display: block !important;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .dropdown-icon {
+      margin-left: auto;
+    }
+
+    &:hover {
+      color: $wl-primary;
+      cursor: pointer;
+    }
+  }
+
+  .children-container {
+    padding-left: 10px;
+  }
+}

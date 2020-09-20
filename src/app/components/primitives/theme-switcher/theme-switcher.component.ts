@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+const DARK_THEME = 'dark-theme';
+const LIGHT_THEME = 'light-theme';
+const ORANGE_COLOR = 'orange-';
+
 @Component({
   selector: 'wl-theme-switcher',
   templateUrl: './theme-switcher.component.html',
@@ -7,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThemeSwitcherComponent implements OnInit {
 
-  themeLight = 'light-theme';
-  themeColor = 'magenta';
+  themeLight = LIGHT_THEME;
+  themeColor = ORANGE_COLOR;
   darkThemeModeOn = false;
   constructor() { }
 
@@ -25,6 +29,9 @@ export class ThemeSwitcherComponent implements OnInit {
       // add that class to body
       const body = document.getElementsByTagName('body')[0];
       body.classList.add(this.themeColor + this.themeLight);
+      this.darkThemeModeOn = this.themeLight === DARK_THEME;
+    } else {
+      this.changeTheme(this.themeColor, this.themeLight);
     }
   }
 
@@ -39,10 +46,10 @@ export class ThemeSwitcherComponent implements OnInit {
     if (this.themeLight !== themeLightToSet && themeLightToSet) {
       this.themeLight = themeLightToSet;
     }
-
     body.classList.add(this.themeColor + this.themeLight);
 
     // save it to local storage
+    this.darkThemeModeOn = this.themeLight === DARK_THEME;
 
     localStorage.setItem('pxThemeColor', this.themeColor);
     localStorage.setItem('pxThemeLight', this.themeLight);
@@ -50,11 +57,9 @@ export class ThemeSwitcherComponent implements OnInit {
 
   changeThemeLight(event): void {
     if (event.checked) {
-      this.darkThemeModeOn = true;
-      this.changeTheme(null, 'dark-theme');
+      this.changeTheme(null, DARK_THEME);
     } else {
-      this.darkThemeModeOn = false;
-      this.changeTheme(null, 'light-theme');
+      this.changeTheme(null, LIGHT_THEME);
     }
   }
 

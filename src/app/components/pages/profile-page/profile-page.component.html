@@ -1,0 +1,43 @@
+<div class="profile-page">
+  <h1>{{ 'profilePage.profile' | translate }}</h1>
+  <div class="row d-flex justify-content-end">
+    <button mat-raised-button color="accent" class="add-subject" aria-label="View Profile" (click)="viewProfile()">
+      <mat-icon>person</mat-icon>
+      {{ 'profilePage.editProfile' | translate }}
+    </button>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.firstName' | translate }}: </h6>
+        <span>{{ userProfile.firstName }}</span>
+      </div>
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.lastName' | translate }}: </h6>
+        <span>{{ userProfile.lastName }}</span>
+      </div>
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.username' | translate }}: </h6>
+        <span>{{ userProfile.username }}</span>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.email' | translate }}: </h6>
+        <span>{{ userProfile.email }}</span>
+      </div>
+      <div class="row no-gutters">
+        <h6 class="label">{{ 'profilePage.type' | translate }}: </h6>
+        <span>{{ userProfile.type }}</span>
+      </div>
+    </div>
+    <div class="col-12">
+      <h6>Upload your user profile picture</h6>
+      <wl-file-uploader [extensions]="['jpg', 'jpeg', 'png', 'img']"
+                          [accept]="'.jpg, .jpeg, .png, .img'"
+                          (filesChange)="onImageSelected($event)"
+                          [multiple]="false"
+                          id="inputProfile"></wl-file-uploader>
+    </div>
+  </div>
+</div>

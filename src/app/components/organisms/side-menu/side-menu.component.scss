@@ -6,4 +6,78 @@
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+}
+
+.side-bar {
+  width: $sidebarDefaultWidth;
+  min-width: $sidebarMinWidth;
+  height: 100%;
+  border: none;
+  //position: absolute;
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+  padding: 3rem 0;
+
+  .side-bar-resize-button {
+    visibility: hidden;
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    cursor: w-resize;
+  }
+
+  &:hover {
+
+    .side-bar-resize-button {
+      visibility: visible;
+    }
+  }
+}
+
+/deep/ .side-menu {
+
+  .mat-sidenav-content {
+    margin-left: 0 !important;
+    display: flex;
+    flex: 1;
+  }
+
+  .mat-drawer-inner-container {
+    display: flex;
+    flex-direction: column;
+    overflow: unset;
+
+    .side-bar-menu {
+      padding: 0.5rem;
+    }
+
+    .theme-switcher {
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-container {
+  padding: 3rem;
+  width: 100%;
+}
+
+@media screen and (max-width: $md) {
+
+  .side-bar {
+    width: $sidebarMinWidth;
+    min-width: $sidebarMinWidth;
+    max-width: $sidebarMinWidth;
+
+    .side-bar-resize-button {
+      display: none;
+    }
+  }
 }

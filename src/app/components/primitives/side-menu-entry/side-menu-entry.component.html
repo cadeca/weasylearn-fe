@@ -1,0 +1,18 @@
+<div class="side-menu-entry" *ngIf="sidebarEntry">
+  <div class="entry-definition" (click)="navigateToPage(sidebarEntry.code)">
+    <mat-icon
+      class="icon">
+      {{ sidebarEntry.icon }}
+    </mat-icon>
+    <h6 class="d-none d-md-block">{{ 'sidebar.' + sidebarEntry.code | translate }}</h6>
+    <mat-icon
+      *ngIf="sidebarEntry.children && sidebarEntry.children.length"
+      class="icon dropdown-icon"
+      (click)="toggleChildrenVisible($event)">
+      arrow_drop_down
+    </mat-icon>
+  </div>
+  <div class="children-container" *ngIf="showChildren">
+    <wl-side-menu-entry *ngFor="let childrenEntry of sidebarEntry.children" [sidebarEntry]="childrenEntry"></wl-side-menu-entry>
+  </div>
+</div>

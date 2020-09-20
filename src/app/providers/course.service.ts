@@ -24,4 +24,8 @@ export class CourseService {
   exportCourseSubject(courseID: string): Observable<CourseSubject> {
     return this.httpService.get('subject/export?subjectID=' + courseID);
   }
+
+  saveCourseSubject(subject: CourseSubject): Observable<any> {
+    return this.httpService.put('subject', subject);
+  }
 }

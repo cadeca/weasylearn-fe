@@ -1,9 +1,40 @@
 {
+  "general": {
+    "name": "Nume",
+    "code": "Cod",
+    "semester": "Semestru",
+    "description": "Descriere"
+  },
+  "header": {
+    "profile": "Profil",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "subjects": "Subiecte",
+    "questionBank": "Bancă de întrebări",
+    "createTest": "Pornește test",
+    "grading": "Note",
+    "testTemplates": "Șablon de test"
+  },
   "homePage": {
     "title": "Bine ai venit la WeasyLearn!",
     "findOutMore": "Click pentru a afla mai multe!"
   },
   "subjectsPage": {
-    "title": "Pagina de Subjects functioneaza"
+    "addSubject": "Adaugă curs",
+    "code": "Cod",
+    "name": "Nume",
+    "description": "Descriere",
+    "semester": "Semestru",
+    "noSubjects": "Nici un curs valabil"
+  },
+  "profilePage": {
+    "profile": "Profilul meu",
+    "editProfile": "Editează profilul Keycloak",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "email": "Email",
+    "type": "Tip",
+    "username": "Nume de utilizator"
   }
 }
