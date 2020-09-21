@@ -45,6 +45,7 @@ export class ModulePermissionsService {
   ];
   constructor(private authService: AuthService) {
     this.userPermissions = authService.getUserRoles();
+    console.log(this.userPermissions);
   }
 
   getWhitelistedSidebarEntries(): any {

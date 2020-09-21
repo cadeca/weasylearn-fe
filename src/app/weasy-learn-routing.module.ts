@@ -12,10 +12,10 @@ const routes: Routes = [
     path: 'home', component: DashboardPageComponent,
     canActivate: [AuthGuard],
     children: [
-      {path: 'subjects', component: SubjectsPageComponent, data: {roles: ['app-admin', 'app-teacher']}},
-      {path: 'subject', component: SubjectPageComponent, data: {roles: ['app-admin', 'app-teacher']}},
-      {path: 'profile', component: ProfilePageComponent, data: {roles: ['app-admin', 'app-teacher', 'app-student']}},
-      {path: 'theme', component: ThemeTestPageComponent, canActivate: [AuthGuard], data: {roles: ['app-developer']}},
+      {path: 'subject', component: SubjectPageComponent, data: {roles: ['admin', 'teacher', 'developer']}},
+      {path: 'subjects', component: SubjectsPageComponent, data: {roles: ['admin', 'teacher', 'student', 'developer']}},
+      {path: 'profile', component: ProfilePageComponent, data: {roles: ['admin', 'teacher', 'student', 'developer']}},
+      {path: 'theme', component: ThemeTestPageComponent, data: {roles: ['developer']}},
     ]
   },
   {path: '**', redirectTo: '/home/subjects', pathMatch: 'full'},
