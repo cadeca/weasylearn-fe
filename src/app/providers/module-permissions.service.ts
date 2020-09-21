@@ -10,41 +10,42 @@ export class ModulePermissionsService {
       code: 'subjects',
       route: 'subjects',
       icon: 'library_books',
-      whitelistedRoles: ['admin', 'teacher', 'student'],
+      whitelistedRoles: ['admin', 'teacher', 'student', 'developer'],
     },
     {
       code: 'questionBank',
       route: 'question-bank',
       icon: 'file_copy',
-      whitelistedRoles: ['admin', 'teacher'],
+      whitelistedRoles: ['admin', 'teacher', 'developer'],
     },
     {
       code: 'testTemplates',
       route: 'test-templates',
       icon: 'donut_small',
-      whitelistedRoles: ['admin', 'teacher'],
+      whitelistedRoles: ['admin', 'teacher', 'developer'],
     },
     {
       code: 'createTest',
       route: 'create-rest',
       icon: 'title',
-      whitelistedRoles: ['admin', 'teacher'],
+      whitelistedRoles: ['admin', 'teacher', 'developer'],
     },
     {
       code: 'grading',
       route: 'grading',
       icon: 'grading',
-      whitelistedRoles: ['admin', 'teacher', 'student'],
+      whitelistedRoles: ['admin', 'teacher', 'student', 'developer'],
     },
     {
       code: 'startTest',
       route: 'startTest',
       icon: 'title',
-      whitelistedRoles: ['student'],
+      whitelistedRoles: ['student', 'developer'],
     }
   ];
   constructor(private authService: AuthService) {
     this.userPermissions = authService.getUserRoles();
+    console.log(this.userPermissions);
   }
 
   getWhitelistedSidebarEntries(): any {
