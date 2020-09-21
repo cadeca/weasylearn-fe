@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {CourseSubject} from '../../../providers/types/wl-types';
 import {Router} from '@angular/router';
+import {Roles} from '../../../directives/roles';
 
 @Component({
   selector: 'wl-subjects-list',
@@ -10,6 +11,7 @@ import {Router} from '@angular/router';
 export class SubjectsListComponent {
   visibleSubjects: CourseSubject[] = [];
   private allSubjects: CourseSubject[] = [];
+  roles = Roles;
 
 
   @Input()

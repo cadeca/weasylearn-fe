@@ -12,15 +12,14 @@ import {WeasyLearnRoutingModule} from '../../weasy-learn-routing.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {ProvidersModule} from '../../providers/providers.module';
 import {SubjectsListComponent} from './subjects-list/subjects-list.component';
-import {CreateSubjectDialogComponent} from './create-subject-dialog/create-subject-dialog.component';
-import {UsersTableComponent} from './users-table/users-table.component';
+import {CreateEditSubjectComponent} from './create-edit-subject/create-edit-subject.component';
+import {DirectivesModule} from '../../directives/directives.module';
 
 const components = [
   HeaderComponent,
   SideMenuComponent,
   SubjectsListComponent,
-  CreateSubjectDialogComponent,
-  UsersTableComponent
+  CreateEditSubjectComponent
 ];
 
 @NgModule({
@@ -36,7 +35,8 @@ const components = [
     PrimitivesModule,
     WeasyLearnRoutingModule,
     TranslateModule,
-    ProvidersModule
+    ProvidersModule,
+    DirectivesModule
   ],
   exports: components
 })

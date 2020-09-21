@@ -2,6 +2,18 @@
 
 .subject-entry {
   width: 100%;
+  padding: 0.5rem 0;
+}
+
+.mat-list-item {
+
+  &:not(:first-child) {
+
+    &:hover {
+      box-shadow: $elevation-shadow-2px;
+      cursor: pointer;
+    }
+  }
 }
 
 .list-headline {

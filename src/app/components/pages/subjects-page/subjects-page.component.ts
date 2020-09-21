@@ -3,6 +3,7 @@ import {CourseService} from '../../../providers/course.service';
 import {CourseSubject} from '../../../providers/types/wl-types';
 import {MatDialog} from '@angular/material/dialog';
 import {Router} from '@angular/router';
+import {Roles} from '../../../directives/roles';
 
 @Component({
   selector: 'wl-subjects-page',
@@ -12,6 +13,7 @@ import {Router} from '@angular/router';
 export class SubjectsPageComponent implements OnInit {
   subjects: CourseSubject[];
   searchField: string;
+  roles = Roles;
 
   constructor(private courseService: CourseService, public dialog: MatDialog, private router: Router) {
   }

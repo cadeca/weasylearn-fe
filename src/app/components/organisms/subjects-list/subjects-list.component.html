@@ -31,7 +31,8 @@
           {{ subject.semester }}
         </div>
         <div class="col-1">
-          <button mat-icon-button color="accent" aria-label="Edit Subject" (click)="editSubject(subject)">
+          <button mat-icon-button color="accent" aria-label="Edit Subject" (click)="editSubject(subject)"
+                  wlRoleCheck [whitelistedRoles]="[roles.ADMIN, roles.DEV, roles.TEACHER]">
             <mat-icon>create</mat-icon>
           </button>
         </div>
