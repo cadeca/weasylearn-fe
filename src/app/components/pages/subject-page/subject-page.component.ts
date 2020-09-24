@@ -16,15 +16,18 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private courseService: CourseService,
-    private router: Router) {}
+    private router: Router) {
+  }
 
   ngOnInit(): void {
     this.sub = this.route
       .queryParams
       .subscribe(params => {
-        const subjectCode = +params.subjectCode || undefined;
-        if (subjectCode) {
-          this.retrieveSubjectData(subjectCode);
+        const subjectId = params.subjectId || undefined;
+        console.log(params);
+        if (subjectId) {
+          console.log(subjectId);
+          this.retrieveSubjectData(subjectId);
         }
       });
   }
@@ -40,12 +43,12 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
   }
 
   addOrEditSubject(subject): void {
-      if (subject) {
-        this.courseService.saveCourseSubject(subject).subscribe(() => {
-          this.router.navigate(['/home/subjects']);
-        });
-      } else {
+    if (subject) {
+      this.courseService.saveCourseSubject(subject).subscribe(() => {
         this.router.navigate(['/home/subjects']);
-      }
+      });
+    } else {
+      this.router.navigate(['/home/subjects']);
+    }
   }
 }

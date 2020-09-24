@@ -21,7 +21,7 @@ export class UserChipListComponent implements OnInit {
   }
   @Input()
   set preselectedUsers(selectedUsers: User[]) {
-    this.selectedUsernames = selectedUsers.map(user => user.username);
+    this.selectedUsernames = selectedUsers?.map(user => user.username) || [];
   }
   @Input()
   placeholder = 'User';

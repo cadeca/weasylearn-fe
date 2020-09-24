@@ -14,18 +14,19 @@ export class CourseService {
   }
 
   getCourseSubjectById(courseID: string): Observable<CourseSubject> {
-    return this.httpService.get('subject?subjectID=' + courseID);
+    console.log(`subject/${courseID}`);
+    return this.httpService.get(`subject/${courseID}`);
   }
 
   deleteCourseSubject(courseID: string): Observable<any> {
-    return this.httpService.delete('subject/delete?subjectID=' + courseID);
+    return this.httpService.delete(`subject?id=${courseID}`);
   }
 
   exportCourseSubject(courseID: string): Observable<CourseSubject> {
-    return this.httpService.get('subject/export?subjectID=' + courseID);
+    return this.httpService.get(`subject/export?id=${courseID}`);
   }
 
   saveCourseSubject(subject: CourseSubject): Observable<any> {
-    return this.httpService.put('subject', subject);
+    return this.httpService.post('subject', subject);
   }
 }

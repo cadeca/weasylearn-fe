@@ -22,10 +22,10 @@ export class UserService {
   }
 
   getTeachers(): Observable<Teacher[]>  {
-    return this.httpService.get('teacher/all');
+    return this.httpService.get('user/teachers');
   }
 
   getStudents(): Observable<Teacher[]>  {
-    return this.httpService.get('student/all');
+    return this.httpService.get('user/students');
   }
 }
