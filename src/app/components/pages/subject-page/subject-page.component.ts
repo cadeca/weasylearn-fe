@@ -24,9 +24,7 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
       .queryParams
       .subscribe(params => {
         const subjectId = params.subjectId || undefined;
-        console.log(params);
         if (subjectId) {
-          console.log(subjectId);
           this.retrieveSubjectData(subjectId);
         }
       });
