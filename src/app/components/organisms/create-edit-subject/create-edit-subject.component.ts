@@ -72,7 +72,8 @@ export class CreateEditSubjectComponent implements OnInit {
       username: 'darius.nagy'
     }];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
     this.userService.getTeachers().subscribe(teachers => {
@@ -92,7 +93,12 @@ export class CreateEditSubjectComponent implements OnInit {
   }
 
   create(): void {
-    this.createSubject.emit(this.newSubject.value);
+    const value = this.newSubject.value;
+    const courseSubject = value as CourseSubject;
+    value.teacher = courseSubject.teacher.username;
+    value.tutors = courseSubject.tutors.map(t => t.username);
+    value.students = courseSubject.students.map(s => s.username);
+    this.createSubject.emit(value);
   }
 
   close(): void {

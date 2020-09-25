@@ -14,7 +14,6 @@ export class CourseService {
   }
 
   getCourseSubjectById(courseID: string): Observable<CourseSubject> {
-    console.log(`subject/${courseID}`);
     return this.httpService.get(`subject/${courseID}`);
   }
 

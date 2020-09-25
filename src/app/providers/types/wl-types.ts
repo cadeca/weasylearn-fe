@@ -11,6 +11,18 @@ export interface CourseSubject {
   id?: number;
 }
 
+export interface SaveCourseSubject {
+  name: string;
+  code: string;
+  description?: string;
+  semester?: number;
+  teacher?: string;
+  tutors?: string[];
+  students?: string[];
+  groups?: StudentsGroup[];
+  id?: number;
+}
+
 export interface SidebarEntry {
   code: string;
   route: string;
