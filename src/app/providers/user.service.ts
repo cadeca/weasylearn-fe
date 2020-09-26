@@ -21,11 +21,11 @@ export class UserService {
     return this.httpService.post('user/profile/image', file);
   }
 
-  getTeachers(): Observable<Teacher[]>  {
+  getTeachers(): Observable<Teacher[]> {
     return this.httpService.get('user/teachers');
   }
 
-  getStudents(): Observable<Teacher[]>  {
+  getStudents(): Observable<Teacher[]> {
     return this.httpService.get('user/students');
   }
 }

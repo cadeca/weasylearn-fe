@@ -40,7 +40,7 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
     });
   }
 
-  addOrEditSubject(subject): void {
+  save(subject): void {
     if (subject) {
       this.courseService.saveCourseSubject(subject).subscribe(() => {
         this.router.navigate(['/home/subjects']);

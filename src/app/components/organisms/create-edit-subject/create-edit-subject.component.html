@@ -22,11 +22,6 @@
     </div>
     <div class="col-12 col-md-8">
       <mat-form-field appearance="legacy" class="subject-form-item">
-<!--        <mat-select formControlName="teacher" placeholder="Teacher">-->
-<!--          <mat-option *ngFor="let teacher of teachers" [value]="teacher.email">-->
-<!--            {{ teacher.firstName }} {{ teacher.lastName }}-->
-<!--          </mat-option>-->
-<!--        </mat-select>-->
         <input matInput placeholder="Teacher"
                [matAutocomplete]="teacherAuto"
                formControlName="teacher">
@@ -44,7 +39,6 @@
                          [placeholder]="'Students'" (selectedUserChange)="selectStudents($event)"></wl-user-chip-list>
 
 
-
       <!--        <mat-form-field appearance="legacy" class="subject-form-item">-->
       <!--          <mat-select formControlName="teacher" placeholder="Groups">-->
       <!--            <mat-option *ngFor="let teacher of teachers" [value]="teacher.email">-->
@@ -56,7 +50,7 @@
   </form>
   <div class="row" align="end">
     <button mat-button color="primary" (click)="close()">Cancel</button>
-    <button mat-raised-button color="accent" [disabled]="!newSubject.valid" (click)="create()">Create</button>
+    <button mat-raised-button color="accent" [disabled]="!newSubject.valid" (click)="save()">Save</button>
   </div>
 
 </div>
