@@ -9,7 +9,11 @@ export class CourseService {
   constructor(private httpService: HttpService) {
   }
 
-  getAllCourseSubjects(): Observable<CourseSubject[]> {
+  getAllCourseSubjects(query?: string): Observable<CourseSubject[]> {
+    return this.httpService.get('subject/search', {params: {query}});
+  }
+
+  getUsersCourseSubjects(): Observable<CourseSubject[]> {
     return this.httpService.get('subject');
   }
 
