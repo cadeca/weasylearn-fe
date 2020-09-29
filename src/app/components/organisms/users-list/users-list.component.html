@@ -1,0 +1,43 @@
+<div class="users-list">
+  <mat-list role="list">
+    <mat-list-item role="listitem" class="list-headline">
+      <div class="user-entry row font-weight-bold">
+        <div class="col-3">
+          {{ 'userDetail.firstName' | translate }}
+        </div>
+        <div class="col-2">
+          {{ 'userDetail.lastName' | translate }}
+        </div>
+        <div class="col-3">
+          {{ 'userDetail.username' | translate }}
+        </div>
+        <div class="col-4">
+          {{ 'userDetail.email' | translate }}
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-list-item role="listitem" *ngFor="let user of visibleUsers">
+      <div class="user-entry row">
+        <div class="col-12 col-md-3">
+          <span class="label">{{ 'userDetail.firstName' | translate }}:</span>
+          {{ user.firstName }}
+        </div>
+        <div class="col-12 col-md-2">
+          <span class="label">{{ 'userDetail.lastName' | translate }}:</span>
+          {{ user.lastName }}
+        </div>
+        <div class="col-12 col-md-3">
+          <span class="label">{{ 'userDetail.username' | translate }}:</span>
+          {{ user.username }}
+        </div>
+        <div class="col-12 col-md-4">
+          <span class="label">{{ 'userDetail.email' | translate }}:</span>
+          {{ user.email }}
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-list-item role="listitem" *ngIf="!visibleUsers || !visibleUsers.length">
+      {{ 'userDetail.noUser' | translate }}</mat-list-item>
+  </mat-list>
+
+</div>

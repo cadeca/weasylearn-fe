@@ -14,12 +14,14 @@ import {ProvidersModule} from '../../providers/providers.module';
 import {SubjectsListComponent} from './subjects-list/subjects-list.component';
 import {CreateEditSubjectComponent} from './create-edit-subject/create-edit-subject.component';
 import {DirectivesModule} from '../../directives/directives.module';
+import {UsersListComponent} from './users-list/users-list.component';
 
 const components = [
   HeaderComponent,
   SideMenuComponent,
   SubjectsListComponent,
-  CreateEditSubjectComponent
+  CreateEditSubjectComponent,
+  UsersListComponent
 ];
 
 @NgModule({

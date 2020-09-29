@@ -1,1 +1,33 @@
-<wl-create-edit-subject (createSubject)="save($event)" [subject]="subject"></wl-create-edit-subject>
+<div>
+  <h1>{{ subject.name }}</h1>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <span class="label">{{ 'subjectsPage.code' | translate }}:</span>
+      {{ subject.code }}
+    </div>
+    <div class="col-12 col-md-6">
+      <span class="label">{{ 'subjectsPage.name' | translate }}:</span>
+      {{ subject.name }}
+    </div>
+    <div class="col-12 col-md-6">
+      <span class="label">{{ 'subjectsPage.description' | translate }}:</span>
+      {{ subject.description }}
+    </div>
+    <div class="col-12 col-md-6">
+      <span class="label">{{ 'subjectsPage.semester' | translate }}:</span>
+      {{ subject.semester }}
+    </div>
+    <div class="col-12">
+      <span class="label">{{ 'subjectsPage.teacher' | translate }}:</span>
+      {{ subject.teacher.firstName }} {{ subject.teacher.lastName }}
+    </div>
+    <div class="col-12">
+      <span class="label">{{ 'subjectsPage.tutors' | translate }}:</span>
+      <wl-users-list *ngIf="subject.tutors && subject.tutors.length" [users]="subject.tutors"></wl-users-list>
+    </div>
+    <div class="col-12">
+      <span class="label">{{ 'subjectsPage.students' | translate }}:</span>
+      <wl-users-list *ngIf="subject.students && subject.students" [users]="subject.students"></wl-users-list>
+    </div>
+  </div>
+</div>
