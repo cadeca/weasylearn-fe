@@ -12,6 +12,8 @@ export class FileUploaderComponent implements OnInit, OnDestroy {
   @Input()
   multiple = false;
   @Input()
+  returnEvent = false;
+  @Input()
   extensions: string[] = null;
   @Input()
   accept = '';

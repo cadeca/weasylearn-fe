@@ -11,6 +11,7 @@ import {User} from '../../../providers/types/wl-types';
 export class ProfilePageComponent implements OnInit {
   userProfile: User;
   profileImage: File;
+  changePictureRequested = false;
 
   constructor(private authService: AuthService, private userService: UserService) {
   }
@@ -28,10 +29,11 @@ export class ProfilePageComponent implements OnInit {
     this.authService.goToProfilePage();
   }
 
-  onImageSelected(files: File[]): void {
-    if (files && files[0]) {
-      this.userService.setProfileImage(files[0]).subscribe(image => {
+  onImageSelected(picture): void {
+    if (picture) {
+      this.userService.setProfileImage(picture).subscribe(image => {
         this.profileImage = image;
+        this.changePictureRequested = false;
       });
     }
 

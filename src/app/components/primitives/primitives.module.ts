@@ -11,13 +11,16 @@ import {SideMenuEntryComponent} from './side-menu-entry/side-menu-entry.componen
 import {FileUploaderComponent} from './file-uploader/file-uploader.component';
 import {LanguageToggleComponent} from './language-toggle/language-toggle.component';
 import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
+import {ImageCropperModule} from 'ngx-image-cropper';
+import {ImageUploaderComponent} from './image-uploader/image-uploader.component';
 
 const components = [
   ThemeSwitcherComponent,
   SideMenuEntryComponent,
   FileUploaderComponent,
   LanguageToggleComponent,
-  UserProfileMenuComponent
+  UserProfileMenuComponent,
+  ImageUploaderComponent
 ];
 
 @NgModule({
@@ -30,7 +33,8 @@ const components = [
     ReactiveFormsModule,
     FlexLayoutModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    ImageCropperModule
   ],
   exports: components,
 })

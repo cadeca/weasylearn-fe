@@ -35,19 +35,3 @@
   opacity: 0;
   z-index: 1;
 }
-
-.file-name {
-  padding: 3px;
-  margin: 3px;
-  display: flex;
-  justify-content: space-between;
-
-  .remove-button {
-    margin: 0 10px;
-    transition: 0.5s color;
-  }
-
-  &:hover {
-    box-shadow: $wl-box-shadow;
-  }
-}

@@ -30,14 +30,16 @@
         <h6 class="label">{{ 'profilePage.type' | translate }}: </h6>
         <span>{{ userProfile.type }}</span>
       </div>
+      <div class="row no-gutters" *ngIf="userProfile.profilePicture">
+        <h6 class="profile-picture">{{ 'profilePage.picture' | translate }}: </h6>
+          <button mat-mini-fab color="primary" (click)="changePictureRequested = true">
+            <mat-icon>image</mat-icon>
+          </button>
+      </div>
     </div>
-    <div class="col-12">
+    <div class="col-6" *ngIf="(userProfile && !userProfile.profilePicture) || changePictureRequested">
       <h6>Upload your user profile picture</h6>
-      <wl-file-uploader [extensions]="['jpg', 'jpeg', 'png', 'img']"
-                          [accept]="'.jpg, .jpeg, .png, .img'"
-                          (filesChange)="onImageSelected($event)"
-                          [multiple]="false"
-                          id="inputProfile"></wl-file-uploader>
+      <wl-image-uploader (imageChange)="onImageSelected($event)"></wl-image-uploader>
     </div>
   </div>
 </div>
