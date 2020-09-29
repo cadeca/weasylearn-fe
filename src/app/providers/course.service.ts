@@ -10,7 +10,7 @@ export class CourseService {
   }
 
   getAllCourseSubjects(query?: string): Observable<CourseSubject[]> {
-    return this.httpService.get('subject/search', {params: {query}});
+    return this.httpService.get('subject/search', query ? {params: {query}} : {});
   }
 
   getUsersCourseSubjects(): Observable<CourseSubject[]> {

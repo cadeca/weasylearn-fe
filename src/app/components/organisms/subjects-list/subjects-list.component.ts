@@ -39,6 +39,6 @@ export class SubjectsListComponent {
   constructor(private router: Router) { }
 
   editSubject(subject: CourseSubject): void {
-    this.router.navigate(['/home/subject'], { queryParams: { subjectId: subject.id } });
+    this.router.navigate(['/home/view-subject'], { queryParams: { subjectId: subject.id } });
   }
 }

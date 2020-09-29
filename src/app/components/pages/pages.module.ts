@@ -16,13 +16,15 @@ import {OrganismsModule} from '../organisms/organisms.module';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
 import {SubjectPageComponent} from './subject-page/subject-page.component';
 import {DirectivesModule} from '../../directives/directives.module';
+import {CreateSubjectPageComponent} from './create-subject-page/create-subject-page.component';
 
 const components = [
   SubjectsPageComponent,
   DashboardPageComponent,
   ThemeTestPageComponent,
   ProfilePageComponent,
-  SubjectPageComponent
+  SubjectPageComponent,
+  CreateSubjectPageComponent
 ];
 
 @NgModule({

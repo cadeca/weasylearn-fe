@@ -40,7 +40,7 @@ export class CreateEditSubjectComponent implements OnInit {
     code: new FormControl(null, Validators.required),
     semester: new FormControl(null, Validators.required),
     description: new FormControl(null, Validators.required),
-    teacher: new FormControl(null),
+    teacher: new FormControl(null, Validators.required),
     tutors: new FormControl(null),
     students: new FormControl(null),
     groups: new FormControl(null)

@@ -23,7 +23,7 @@ export class SubjectsPageComponent implements OnInit {
   }
 
   addSubject(): void {
-    this.router.navigate(['/home/subject']);
+    this.router.navigate(['/home/create-subject']);
   }
 
   private getAllSubjects(): void {
