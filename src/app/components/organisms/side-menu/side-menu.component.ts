@@ -2,6 +2,9 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ModulePermissionsService} from '../../../providers/module-permissions.service';
 
 const MINIMUM_SIDEBAR_WIDTH = 50;
+
+const MAXIMUM_SIDEBAR_WIDTH = 400;
+
 @Component({
   selector: 'wl-side-menu',
   templateUrl: './side-menu.component.html',
@@ -44,11 +47,15 @@ export class SideMenuComponent implements OnInit {
     // tslint:disable-next-line:radix
     const nextMousePosition = (parseInt(getComputedStyle((this.resizableMenu as any)._elementRef.nativeElement, '').width) - dx);
     if (this.resizableMenu) {
-      if (nextMousePosition >= MINIMUM_SIDEBAR_WIDTH) {
+      if (nextMousePosition >= MINIMUM_SIDEBAR_WIDTH && nextMousePosition <= MAXIMUM_SIDEBAR_WIDTH) {
         (this.resizableMenu as any)._elementRef.nativeElement.style.width = nextMousePosition + 'px';
-      } else {
+      } else if (nextMousePosition < MINIMUM_SIDEBAR_WIDTH ) {
         (this.resizableMenu as any)._elementRef.nativeElement.style.width = MINIMUM_SIDEBAR_WIDTH + 'px';
         this.mousePosition = MINIMUM_SIDEBAR_WIDTH;
+        this.handleMouseUp(e);
+      } else {
+        (this.resizableMenu as any)._elementRef.nativeElement.style.width = MAXIMUM_SIDEBAR_WIDTH + 'px';
+        this.mousePosition = MAXIMUM_SIDEBAR_WIDTH;
         this.handleMouseUp(e);
       }
     }

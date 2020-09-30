@@ -5,11 +5,17 @@
         <div class="col-2">
           {{ 'subjectsPage.code' | translate }}
         </div>
-        <div class="col-5">
+        <div class="col-4">
           {{ 'subjectsPage.name' | translate }}
         </div>
-        <div class="col-4">
-          {{ 'subjectsPage.description' | translate }}
+        <div class="col-3">
+          {{ 'subjectsPage.teacher' | translate }}
+        </div>
+        <div class="col-1">
+          {{ 'subjectsPage.tutors' | translate }}
+        </div>
+        <div class="col-1">
+          {{ 'subjectsPage.students' | translate }}
         </div>
         <div class="col-1">
           {{ 'subjectsPage.semester' | translate }}
@@ -23,13 +29,21 @@
             <span class="label">{{ 'subjectsPage.code' | translate }}:</span>
             {{ subject.code }}
           </div>
-          <div class="col-12 col-md-5">
+          <div class="col-12 col-md-4">
             <span class="label">{{ 'subjectsPage.name' | translate }}:</span>
             {{ subject.name }}
           </div>
-          <div class="col-12 col-md-4">
-            <span class="label">{{ 'subjectsPage.description' | translate }}:</span>
-            {{ subject.description }}
+          <div class="col-12 col-md-3">
+            <span class="label">{{ 'subjectsPage.teacher' | translate }}:</span>
+            {{ subject.teacher.firstName }} {{ subject.teacher.lastName }}
+          </div>
+          <div class="col-12 col-md-1">
+            <span class="label">{{ 'subjectsPage.tutors' | translate }}:</span>
+            {{ subject.tutors.length || 0 }}
+          </div>
+          <div class="col-12 col-md-1">
+            <span class="label">{{ 'subjectsPage.students' | translate }}:</span>
+            {{ subject.students.length || 0 }}
           </div>
           <div class="col-12 col-md-1">
             <span class="label">{{ 'subjectsPage.semester' | translate }}:</span>
