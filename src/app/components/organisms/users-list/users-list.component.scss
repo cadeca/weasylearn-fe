@@ -27,7 +27,7 @@
     height: auto !important;
     margin-bottom: 15px;
 
-    &:not(:first-child) {
+    &:not(.list-headline) {
 
       &:hover {
         box-shadow: $elevation-shadow-teal-2px;
@@ -35,7 +35,7 @@
       }
     }
 
-    &:first-child {
+    &.list-headline {
       @include scrollableContentPadding;
     }
 
