@@ -9,6 +9,13 @@ $elevation-shadow-4px: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 
 $elevation-shadow-2px: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 $elevation-shadow-0px: 0 0 1px 0 rgba(0, 0, 0, 0.12);
 
+$elevation-shadow-teal-16px: 0 2px 4px 0 $wl-primary, 0 0 16px 0 $wl-primary;
+$elevation-shadow-teal-12px: 0 2px 4px 0 $wl-primary, 0 0 12px 0 $wl-primary;
+$elevation-shadow-teal-8px: 0 2px 4px 0 $wl-primary, 0 0 8px 0 $wl-primary;
+$elevation-shadow-teal-4px: 0 2px 4px 0 $wl-primary, 0 0 4px 0 $wl-primary;
+$elevation-shadow-teal-2px: 0 0 4px 0 $wl-primary, 0 0 2px 0 $wl-primary;
+$elevation-shadow-teal-0px: 0 0 1px 0 $wl-primary;
+
 $transition-hide: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-show: cubic-bezier(0, 0, 0.2, 1);
 $transition-move: cubic-bezier(0.4, 0, 0.2, 1);
@@ -16,7 +23,7 @@ $transition-move: cubic-bezier(0.4, 0, 0.2, 1);
 $font__weight--light: 300;
 $font__weight--medium: 500;
 $font__weight--bold: 700;
-$body-font-size: 16px;
+$body-font-size: 18px;
 $body-font-weight: $font__weight--light;
 $body-font-style: normal;
 $body-line-height: 1.5;
@@ -53,3 +60,7 @@ $wl-box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.16);
 $wl-header-height: 60px;
 $sidebarMinWidth: 50px;
 $sidebarDefaultWidth: 200px;
+
+@mixin scrollableContentPadding {
+  padding: 10px 5px;
+}

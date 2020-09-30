@@ -26,7 +26,10 @@
     "name": "Nume",
     "description": "Descriere",
     "semester": "Semestru",
-    "noSubjects": "Nici un curs valabil"
+    "noSubjects": "Nici un curs valabil",
+    "tutors": "Tutori",
+    "teacher": "Profesor",
+    "students": "Studenți"
   },
   "profilePage": {
     "profile": "Profilul meu",
@@ -36,5 +39,12 @@
     "email": "Email",
     "type": "Tip",
     "username": "Nume de utilizator"
+  },
+  "userDetail" : {
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "username": "Nume de utilizator",
+    "email": "Email",
+    "noUser": "No user available"
   }
 }

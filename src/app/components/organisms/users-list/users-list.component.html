@@ -16,7 +16,8 @@
         </div>
       </div>
     </mat-list-item>
-    <mat-list-item role="listitem" *ngFor="let user of visibleUsers">
+    <div class="scrollable-list">
+     <mat-list-item role="listitem" *ngFor="let user of visibleUsers">
       <div class="user-entry row">
         <div class="col-12 col-md-3">
           <span class="label">{{ 'userDetail.firstName' | translate }}:</span>
@@ -36,6 +37,7 @@
         </div>
       </div>
     </mat-list-item>
+    </div>
     <mat-list-item role="listitem" *ngIf="!visibleUsers || !visibleUsers.length">
       {{ 'userDetail.noUser' | translate }}</mat-list-item>
   </mat-list>

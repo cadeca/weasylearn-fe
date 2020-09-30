@@ -1,50 +1,64 @@
 @import "src/assets/style/variables";
 
-.user-entry {
-  width: 100%;
-  padding: 0.5rem 0;
-}
+.users-list {
+  margin: 1rem 0;
 
-/deep/ .mat-list-item {
-  height: auto !important;
-  margin-bottom: 15px;
+  .scrollable-list {
+    max-height: 70vh;
+    overflow-y: auto;
+    @include scrollableContentPadding;
+  }
 
-  &:not(:first-child) {
+  .user-entry {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 
-    &:hover {
-      box-shadow: $elevation-shadow-2px;
-      cursor: pointer;
+  /deep/ .mat-list-item {
+    height: auto !important;
+    margin-bottom: 15px;
+
+    &:not(:first-child) {
+
+      &:hover {
+        box-shadow: $elevation-shadow-teal-2px;
+        cursor: pointer;
+      }
+    }
+
+    &:first-child {
+      @include scrollableContentPadding;
+    }
+
+    .mat-list-item-content {
+      height: auto !important;
     }
   }
 
-  .mat-list-item-content {
-    height: auto !important;
+  .user-entry .label {
+    display: none;
   }
-}
-
-.user-entry .label {
-  display: none;
-}
-
-.list-headline {
-  box-shadow: $elevation-shadow-2px;
-}
-
-@media (max-width: $md) {
 
   .list-headline {
-    display: none !important;
-  }
-
-  .user-entry .label {
-    display: inline-flex;
-  }
-
-  .mat-list-item {
     box-shadow: $elevation-shadow-2px;
+  }
 
-    &:hover {
-      box-shadow: $elevation-shadow-8px;
+  @media (max-width: $md) {
+
+    .list-headline {
+      display: none !important;
+    }
+
+    .user-entry .label {
+      display: inline-flex;
+    }
+
+    .mat-list-item {
+      box-shadow: $elevation-shadow-2px;
+
+      &:hover {
+        box-shadow: $elevation-shadow-teal-8px;
+      }
     }
   }
 }
