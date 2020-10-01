@@ -3,7 +3,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {CourseService} from '../../../providers/course.service';
 import {CourseSubject} from '../../../providers/types/wl-types';
-import {Roles} from '../../../directives/roles';
 import {ModulePermissionsService} from '../../../providers/module-permissions.service';
 
 @Component({
@@ -30,11 +29,7 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
         const subjectId = params.subjectId || undefined;
         if (subjectId) {
           this.retrieveSubjectData(subjectId);
-          if (this.modulePermissionsService.isElementWhitelisted([Roles.ADMIN, Roles.TEACHER, Roles.DEV])) {
-            // TODO remove
-            this.editPermissions = true;
-            this.retrieveEditPermissions(subjectId);
-          }
+          this.retrieveEditPermissions(subjectId);
         }
       });
   }
@@ -61,8 +56,7 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
 
   private retrieveEditPermissions(subjectId: any): void {
     this.modulePermissionsService.getUserPermissionsForSubject(subjectId).subscribe(feedback => {
-      // TODO update these from response
-      this.editPermissions = true;
+      this.editPermissions = feedback;
     });
   }
 

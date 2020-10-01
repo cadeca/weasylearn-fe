@@ -63,6 +63,6 @@ export class ModulePermissionsService {
   }
 
   getUserPermissionsForSubject(subjectId: string): Observable<any> {
-    return this.httpService.get(`permissions/subject/${subjectId}`, subjectId);
+    return this.httpService.get(`subject/isEditable/${subjectId}`);
   }
 }
