@@ -1,4 +1,5 @@
 @import "src/assets/style/variables";
+@import "src/assets/style/animations";
 
 .users-list {
   margin: 1rem 0;
@@ -19,6 +20,19 @@
 
       &[class*='col-'] {
         padding-right: 0;
+      }
+    }
+
+    .edit-student {
+      opacity: 0;
+      @include transition-enter(opacity);
+    }
+
+    &:hover {
+
+      .edit-student {
+        opacity: 1;
+        @include transition-leave(opacity);
       }
     }
   }

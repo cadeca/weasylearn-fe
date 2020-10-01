@@ -1,33 +1,38 @@
-<div class="subject-page">
+<div class="subject-page" *ngIf="subject">
   <h1>{{ subject.name }}</h1>
   <div class="row">
-    <div class="col-12 col-md-6">
-      <span class="label">{{ 'subjectsPage.code' | translate }}:</span>
-      {{ subject.code }}
+    <div class="col-12 col-md-6 info-container">
+      <wl-editable-label-value-entry [value]="subject.code"
+                                     label="{{ 'subjectsPage.code' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </div>
-    <div class="col-12 col-md-6">
-      <span class="label">{{ 'subjectsPage.name' | translate }}:</span>
-      {{ subject.name }}
+    <div class="col-12 col-md-6 info-container">
+      <wl-editable-label-value-entry [value]="subject.name"
+                                     label="{{ 'subjectsPage.name' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </div>
-    <div class="col-12 col-md-6">
-      <span class="label">{{ 'subjectsPage.description' | translate }}:</span>
-      {{ subject.description }}
+    <div class="col-12 col-md-6 info-container">
+      <wl-editable-label-value-entry [value]="subject.description"
+                                     label="{{ 'subjectsPage.description' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </div>
-    <div class="col-12 col-md-6">
-      <span class="label">{{ 'subjectsPage.semester' | translate }}:</span>
-      {{ subject.semester }}
+    <div class="col-12 col-md-6 info-container">
+      <wl-editable-label-value-entry [value]="subject.semester.toString()"
+                                     label="{{ 'subjectsPage.semester' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </div>
-    <div class="col-12">
-      <span class="label">{{ 'subjectsPage.teacher' | translate }}:</span>
-      {{ subject.teacher.firstName }} {{ subject.teacher.lastName }}
+    <div class="col-12 info-container">
+      <wl-editable-label-value-entry value="{{ subject.teacher.firstName }} {{ subject.teacher.lastName }}"
+                                     label="{{ 'subjectsPage.teacher' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </div>
     <div class="col-12">
       <span class="label">{{ 'subjectsPage.tutors' | translate }}:</span>
-      <wl-users-list *ngIf="subject.tutors && subject.tutors.length" [users]="subject.tutors"></wl-users-list>
+      <wl-users-list *ngIf="subject.tutors && subject.tutors.length" [users]="subject.tutors" [isEditable]="editPermissions"></wl-users-list>
     </div>
     <div class="col-12">
       <span class="label">{{ 'subjectsPage.students' | translate }}:</span>
-      <wl-users-list *ngIf="subject.students && subject.students" [users]="subject.students"></wl-users-list>
+      <wl-users-list *ngIf="subject.students && subject.students" [users]="subject.students" [isEditable]="editPermissions"></wl-users-list>
     </div>
   </div>
 </div>

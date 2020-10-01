@@ -2,7 +2,7 @@
   <mat-list role="list">
     <mat-list-item role="listitem" class="list-headline">
       <div class="user-entry row font-weight-bold ">
-        <div class="col-3">
+        <div class="col-2">
           {{ 'userDetail.firstName' | translate }}
         </div>
         <div class="col-2">
@@ -19,7 +19,7 @@
     <div class="scrollable-list">
      <mat-list-item role="listitem" *ngFor="let user of visibleUsers">
       <div class="user-entry row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-2">
           <span class="label">{{ 'userDetail.firstName' | translate }}:</span>
           {{ user.firstName }}
         </div>
@@ -34,6 +34,12 @@
         <div class="col-12 col-md-4">
           <span class="label">{{ 'userDetail.email' | translate }}:</span>
           {{ user.email }}
+        </div>
+        <div class="d-none d-md-flex col-1">
+          <button mat-mini-fab color="accent" class="edit-student" aria-label="Edit student" *ngIf="isEditable"
+                  (click)="editStudent()">
+            <mat-icon>edit</mat-icon>
+          </button>
         </div>
       </div>
     </mat-list-item>

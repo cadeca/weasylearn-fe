@@ -12,6 +12,7 @@ import {FileUploaderComponent} from './file-uploader/file-uploader.component';
 import {LanguageToggleComponent} from './language-toggle/language-toggle.component';
 import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
 import {UserChipListComponent} from './user-chip-list/user-chip-list.component';
+import {EditableLabelValueEntryComponent} from './editable-label-value-entry/editable-label-value-entry.component';
 
 const components = [
   ThemeSwitcherComponent,
@@ -19,7 +20,8 @@ const components = [
   FileUploaderComponent,
   LanguageToggleComponent,
   UserProfileMenuComponent,
-  UserChipListComponent
+  UserChipListComponent,
+  EditableLabelValueEntryComponent
 ];
 
 @NgModule({

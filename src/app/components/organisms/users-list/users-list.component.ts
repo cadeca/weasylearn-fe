@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {User} from '../../../providers/types/wl-types';
-import {Roles} from '../../../directives/roles';
 import {Router} from '@angular/router';
 
 @Component({
@@ -11,7 +10,8 @@ import {Router} from '@angular/router';
 export class UsersListComponent {
   visibleUsers: User[] = [];
   private allUsers: User[] = [];
-  roles = Roles;
+  @Input()
+  isEditable = false;
 
 
   @Input()
@@ -38,4 +38,7 @@ export class UsersListComponent {
 
   constructor(private router: Router) { }
 
+  editStudent(): void {
+
+  }
 }

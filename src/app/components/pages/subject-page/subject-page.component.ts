@@ -3,6 +3,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {CourseService} from '../../../providers/course.service';
 import {CourseSubject} from '../../../providers/types/wl-types';
+import {Roles} from '../../../directives/roles';
+import {ModulePermissionsService} from '../../../providers/module-permissions.service';
 
 @Component({
   selector: 'wl-subject-page',
@@ -12,11 +14,13 @@ import {CourseSubject} from '../../../providers/types/wl-types';
 export class SubjectPageComponent implements OnInit, OnDestroy {
   private sub: Subscription;
   subject: CourseSubject;
+  editPermissions: boolean;
 
   constructor(
     private route: ActivatedRoute,
     private courseService: CourseService,
-    private router: Router) {
+    private router: Router,
+    private modulePermissionsService: ModulePermissionsService) {
   }
 
   ngOnInit(): void {
@@ -26,6 +30,11 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
         const subjectId = params.subjectId || undefined;
         if (subjectId) {
           this.retrieveSubjectData(subjectId);
+          if (this.modulePermissionsService.isElementWhitelisted([Roles.ADMIN, Roles.TEACHER, Roles.DEV])) {
+            // TODO remove
+            this.editPermissions = true;
+            this.retrieveEditPermissions(subjectId);
+          }
         }
       });
   }
@@ -48,5 +57,16 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
     } else {
       this.router.navigate(['/home/subjects']);
     }
+  }
+
+  private retrieveEditPermissions(subjectId: any): void {
+    this.modulePermissionsService.getUserPermissionsForSubject(subjectId).subscribe(feedback => {
+      // TODO update these from response
+      this.editPermissions = true;
+    });
+  }
+
+  editSubject(): void {
+
   }
 }
