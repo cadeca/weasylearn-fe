@@ -16,6 +16,7 @@
 
     .edit-info {
       opacity: 1;
+      cursor: pointer;
       @include transition-leave(opacity);
     }
   }

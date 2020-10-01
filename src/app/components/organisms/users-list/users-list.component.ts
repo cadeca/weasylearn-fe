@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {User} from '../../../providers/types/wl-types';
 import {Router} from '@angular/router';
 
@@ -12,6 +12,8 @@ export class UsersListComponent {
   private allUsers: User[] = [];
   @Input()
   isEditable = false;
+  @Output()
+  removeUser: EventEmitter<string> = new EventEmitter<string>();
 
 
   @Input()
@@ -38,7 +40,7 @@ export class UsersListComponent {
 
   constructor(private router: Router) { }
 
-  editUser(): void {
-
+  editUser(username): void {
+    this.removeUser.emit(username);
   }
 }

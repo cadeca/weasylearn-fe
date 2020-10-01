@@ -32,4 +32,12 @@ export class CourseService {
   saveCourseSubject(subject: CourseSubject): Observable<any> {
     return this.httpService.post('subject', subject);
   }
+
+  removeTutor(courseID: any, tutorUsername): Observable<any> {
+    return this.httpService.delete(`subject/${courseID}/tutor?username=${tutorUsername}`);
+  }
+
+  removeStudent(courseID: any, studentUsername): Observable<any> {
+    return this.httpService.delete(`subject/${courseID}/student?username=${studentUsername}`);
+  }
 }

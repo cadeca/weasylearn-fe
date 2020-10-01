@@ -61,6 +61,17 @@ export class SubjectPageComponent implements OnInit, OnDestroy {
   }
 
   editSubject(): void {
+  }
 
+  removeTutor(tutor: string): void {
+    this.courseService.removeTutor(this.subject.id, tutor).subscribe(() => {
+      this.retrieveSubjectData(this.subject.id);
+    });
+  }
+
+  removeStudent(student: string): void {
+    this.courseService.removeStudent(this.subject.id, student).subscribe(() => {
+      this.retrieveSubjectData(this.subject.id);
+    });
   }
 }

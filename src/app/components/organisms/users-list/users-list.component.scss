@@ -32,6 +32,7 @@
 
       .edit-student {
         opacity: 1;
+        cursor: pointer;
         @include transition-leave(opacity);
       }
     }
@@ -45,7 +46,6 @@
 
       &:hover {
         box-shadow: $elevation-shadow-teal-2px;
-        cursor: pointer;
       }
     }
 

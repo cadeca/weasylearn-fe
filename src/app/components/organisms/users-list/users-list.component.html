@@ -37,7 +37,7 @@
           </div>
           <div class="d-none d-md-flex col-1">
             <mat-icon color="warn" class="edit-student" aria-label="Edit student" *ngIf="isEditable"
-                      (click)="editUser()">clear
+                      (click)="editUser(user.username)">clear
             </mat-icon>
           </div>
         </div>
