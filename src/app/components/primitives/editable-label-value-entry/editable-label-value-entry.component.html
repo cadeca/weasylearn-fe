@@ -1,7 +1,6 @@
 <div class="info-container">
   <span class="label">{{ label }}</span>
   {{ value }}
-  <button mat-mini-fab color="accent" class="edit-info" aria-label="Edit" *ngIf="editPermissions" (click)="editRequest()">
-    <mat-icon>edit</mat-icon>
-  </button>
+  <mat-icon color="accent" class="edit-info" aria-label="Edit" *ngIf="editPermissions" (click)="editRequest()">edit
+  </mat-icon>
 </div>

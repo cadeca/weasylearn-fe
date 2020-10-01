@@ -38,7 +38,7 @@ export class UsersListComponent {
 
   constructor(private router: Router) { }
 
-  editStudent(): void {
+  editUser(): void {
 
   }
 }
