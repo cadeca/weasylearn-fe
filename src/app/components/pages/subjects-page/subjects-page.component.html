@@ -3,7 +3,9 @@
       <mat-form-field class="example-full-width">
           <input matInput placeholder="SubjectName" [(ngModel)]="searchField">
       </mat-form-field>
-      <button mat-raised-button color="accent" class="add-subject" aria-label="Add Subject" (click)="addSubject()">
+      <button mat-raised-button color="accent" class="add-subject" aria-label="Add Subject"
+              wlRoleCheck [whitelistedRoles]="[roles.ADMIN, roles.DEV]"
+              (click)="addSubject()">
         <mat-icon>plus_one</mat-icon>
         {{ 'subjectsPage.addSubject' | translate }}
       </button>

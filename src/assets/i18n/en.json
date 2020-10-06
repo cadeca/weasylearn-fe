@@ -27,7 +27,10 @@
     "name": "Name",
     "description": "Description",
     "semester": "Semester",
-    "noSubjects": "No Subject available"
+    "noSubjects": "No Subject available",
+    "tutors": "Tutors",
+    "teacher": "Teacher",
+    "students": "Students"
   },
   "profilePage": {
     "profile": "My Profile",
@@ -37,5 +40,12 @@
     "email": "Email",
     "type": "Type",
     "username": "Username"
+  },
+  "userDetail" : {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "username": "Username",
+    "email": "Email",
+    "noUser": "Nici un utilizator valabil"
   }
 }

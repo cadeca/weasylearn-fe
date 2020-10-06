@@ -1,0 +1,56 @@
+<div class="create-edit-subject">
+  <h2>Create/Edit Subject</h2>
+  <br>
+  <form [formGroup]="newSubject" class="subject-form row no-gutters">
+    <div class="col-12 col-md-8">
+      <mat-form-field appearance="legacy" class="subject-form-item">
+        <mat-label>{{ 'general.name' | translate}}</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="legacy" class="subject-form-item">
+        <mat-label>{{ 'general.code' | translate}}</mat-label>
+        <input matInput formControlName="code">
+      </mat-form-field>
+      <mat-form-field appearance="legacy" class="subject-form-item">
+        <mat-label>{{ 'general.semester' | translate}}</mat-label>
+        <input matInput type="number" formControlName="semester">
+      </mat-form-field>
+      <mat-form-field appearance="legacy" class="subject-form-item">
+        <mat-label>{{ 'general.description' | translate}}</mat-label>
+        <textarea matInput formControlName="description" rows="3"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="col-12 col-md-8">
+      <mat-form-field appearance="legacy" class="subject-form-item">
+        <input matInput placeholder="Teacher"
+               [matAutocomplete]="teacherAuto"
+               formControlName="teacher">
+        <mat-autocomplete #teacherAuto (optionSelected)="selectTeacher($event)">
+          <mat-option *ngFor="let teacher of teachers" [value]="teacher.username">
+            {{ teacher.firstName }} {{ teacher.lastName }} - {{ teacher.email }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <wl-user-chip-list [users]="tutors"
+                         [preselectedUsers]="preselectedTutors"
+                         [placeholder]="'Tutors'" (selectedUserChange)="selectTutors($event)"></wl-user-chip-list>
+      <wl-user-chip-list [users]="students"
+                         [preselectedUsers]="preselectedStudents"
+                         [placeholder]="'Students'" (selectedUserChange)="selectStudents($event)"></wl-user-chip-list>
+
+
+      <!--        <mat-form-field appearance="legacy" class="subject-form-item">-->
+      <!--          <mat-select formControlName="teacher" placeholder="Groups">-->
+      <!--            <mat-option *ngFor="let teacher of teachers" [value]="teacher.email">-->
+      <!--              {{ teacher.firstName }} {{ teacher.lastName }}-->
+      <!--            </mat-option>-->
+      <!--          </mat-select>-->
+      <!--        </mat-form-field>-->
+    </div>
+  </form>
+  <div class="row" align="end">
+    <button mat-button color="primary" (click)="close()">Cancel</button>
+    <button mat-raised-button color="accent" [disabled]="!newSubject.valid" (click)="save()">Save</button>
+  </div>
+
+</div>
