@@ -5,7 +5,7 @@ import {FormControl} from '@angular/forms';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {Observable} from 'rxjs';
 import {UserService} from '../../../providers/user.service';
-import {map, startWith} from 'rxjs/operators';
+import {debounceTime, switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'wl-user-chip-list',
@@ -13,16 +13,14 @@ import {map, startWith} from 'rxjs/operators';
   styleUrls: ['./user-chip-list.component.scss']
 })
 export class UserChipListComponent implements OnInit {
-
   @Input()
-  set users(allUsers: User[]) {
-    this.allUsers = allUsers;
-    this.setFilteredUsers();
-  }
+  userType: string = null;
+
   @Input()
   set preselectedUsers(selectedUsers: User[]) {
     this.selectedUsernames = selectedUsers?.map(user => user.username) || [];
   }
+
   @Input()
   placeholder = 'User';
   @Output()
@@ -39,7 +37,8 @@ export class UserChipListComponent implements OnInit {
   usersControl = new FormControl();
   filteredUsers: Observable<string[] | User[]>;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit(): void {
     this.setFilteredUsers();
@@ -47,10 +46,8 @@ export class UserChipListComponent implements OnInit {
 
   setFilteredUsers(): void {
     this.filteredUsers = this.usersControl.valueChanges.pipe(
-      startWith(null),
-      map((users: string | null) => users ?
-        this.filterUsers(users, this.allUsers) :
-        this.allUsers.slice().filter(user => !this.selectedUsernames.includes(user.username))));
+      debounceTime(300),
+      switchMap((query: string | null) => this.userService.searchUsers(query, this.userType)));
   }
 
   selectedUsername(event: MatAutocompleteSelectedEvent): void {
@@ -106,13 +103,4 @@ export class UserChipListComponent implements OnInit {
 
 
   // TODO do not allow random txt
-
-  private filterUsers(user: string, allUsers): string[] {
-    const filterValue = user.toLowerCase();
-    const filteredResult = allUsers.filter(us => (us.firstName.toLowerCase().indexOf(filterValue) === 0 ||
-      us.lastName.toLowerCase().indexOf(filterValue) === 0 ||
-      us.email.toLowerCase().indexOf(filterValue) === 0) &&
-    !this.selectedUsernames.includes(us.username));
-    return filteredResult;
-  }
 }

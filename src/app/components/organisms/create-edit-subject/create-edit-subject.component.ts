@@ -16,6 +16,7 @@ export class CreateEditSubjectComponent implements OnInit {
   preselectedStudents: Student[];
   preselectedTutors: User[];
   private subjectId: number;
+  selectedTeacher: Teacher;
 
   @Input()
   set subject(subject: CourseSubject) {
@@ -46,8 +47,6 @@ export class CreateEditSubjectComponent implements OnInit {
     groups: new FormControl(null)
   });
   teachers: Teacher[] = [];
-  tutors: User[] = [];
-  students: Student[] = [];
 
   constructor(private userService: UserService) {
   }
@@ -55,11 +54,6 @@ export class CreateEditSubjectComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getTeachers().subscribe(teachers => {
       this.teachers = teachers;
-      this.tutors = [...this.teachers, ...this.students];
-    });
-    this.userService.getStudents().subscribe(students => {
-      this.students = students;
-      this.tutors = [...this.teachers, ...this.students];
     });
   }
 
@@ -87,6 +81,11 @@ export class CreateEditSubjectComponent implements OnInit {
   }
 
   selectTeacher(event: MatAutocompleteSelectedEvent): void {
-    this.newSubject.controls.teacher.setValue(event.option.value);
+    this.selectedTeacher = event.option.value;
+    this.newSubject.controls.teacher.setValue(this.selectedTeacher.username);
+  }
+
+  formatUser(user: User): string {
+    return user ? `${user.firstName} ${user.lastName} - ${user.email}` : '';
   }
 }
