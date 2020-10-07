@@ -24,17 +24,16 @@
       <mat-form-field appearance="legacy" class="subject-form-item">
         <input matInput placeholder="Teacher"
                [matAutocomplete]="teacherAuto"
-               formControlName="teacher">
+               [value]="formatUser(selectedTeacher)">
         <mat-autocomplete #teacherAuto (optionSelected)="selectTeacher($event)">
-          <mat-option *ngFor="let teacher of teachers" [value]="teacher.username">
-            {{ teacher.firstName }} {{ teacher.lastName }} - {{ teacher.email }}
+          <mat-option *ngFor="let teacher of teachers" [value]="teacher">
+            {{ formatUser(teacher) }}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
-      <wl-user-chip-list [users]="tutors"
-                         [preselectedUsers]="preselectedTutors"
+      <wl-user-chip-list [preselectedUsers]="preselectedTutors"
                          [placeholder]="'Tutors'" (selectedUserChange)="selectTutors($event)"></wl-user-chip-list>
-      <wl-user-chip-list [users]="students"
+      <wl-user-chip-list [userType]="'Student'"
                          [preselectedUsers]="preselectedStudents"
                          [placeholder]="'Students'" (selectedUserChange)="selectStudents($event)"></wl-user-chip-list>
 
