@@ -18,6 +18,7 @@ import {MaterialModule} from '../material.module';
     OrganismsModule,
     PrimitivesModule
   ],
+  declarations: [],
 })
 export class ComponentsModule {
 }

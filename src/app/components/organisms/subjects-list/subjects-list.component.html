@@ -8,30 +8,50 @@
         <div class="col-4">
           {{ 'subjectsPage.name' | translate }}
         </div>
-        <div class="col-5">
-          {{ 'subjectsPage.description' | translate }}
+        <div class="col-3">
+          {{ 'subjectsPage.teacher' | translate }}
+        </div>
+        <div class="col-1">
+          {{ 'subjectsPage.tutors' | translate }}
+        </div>
+        <div class="col-1">
+          {{ 'subjectsPage.students' | translate }}
         </div>
         <div class="col-1">
           {{ 'subjectsPage.semester' | translate }}
         </div>
       </div>
     </mat-list-item>
-    <mat-list-item role="listitem" *ngFor="let subject of visibleSubjects">
-      <div class="subject-entry row">
-        <div class="col-2">
-          {{ subject.code }}
+    <div class="scrollable-list">
+      <mat-list-item role="listitem" *ngFor="let subject of visibleSubjects" (click)="editSubject(subject)">
+        <div class="subject-entry row">
+          <div class="col-12 col-md-2">
+            <span class="label">{{ 'subjectsPage.code' | translate }}:</span>
+            {{ subject.code }}
+          </div>
+          <div class="col-12 col-md-4">
+            <span class="label">{{ 'subjectsPage.name' | translate }}:</span>
+            {{ subject.name }}
+          </div>
+          <div class="col-12 col-md-3">
+            <span class="label">{{ 'subjectsPage.teacher' | translate }}:</span>
+            {{ subject.teacher?.firstName }} {{ subject.teacher?.lastName }}
+          </div>
+          <div class="col-12 col-md-1">
+            <span class="label">{{ 'subjectsPage.tutors' | translate }}:</span>
+            {{ subject.tutors.length || 0 }}
+          </div>
+          <div class="col-12 col-md-1">
+            <span class="label">{{ 'subjectsPage.students' | translate }}:</span>
+            {{ subject.students.length || 0 }}
+          </div>
+          <div class="col-12 col-md-1">
+            <span class="label">{{ 'subjectsPage.semester' | translate }}:</span>
+            {{ subject.semester }}
+          </div>
         </div>
-        <div class="col-4">
-          {{ subject.name }}
-        </div>
-        <div class="col-5">
-          {{ subject.description }}
-        </div>
-        <div class="col-1">
-          {{ subject.semester }}
-        </div>
-      </div>
-    </mat-list-item>
+      </mat-list-item>
+    </div>
     <mat-list-item role="listitem" *ngIf="!visibleSubjects || !visibleSubjects.length">
       {{ 'subjectsPage.noSubjects' | translate }}</mat-list-item>
   </mat-list>

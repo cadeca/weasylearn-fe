@@ -1,0 +1,39 @@
+<div class="subject-page" *ngIf="subject">
+  <h1>{{ subject.name }}</h1>
+  <div class="header-information d-flex justify-content-between">
+    <span>
+      <wl-editable-label-value-entry class="d-inline-flex"
+                                     [value]="subject.code"
+                                     label="{{ 'subjectsPage.code' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
+      <wl-editable-label-value-entry class="d-inline-flex"
+                                     [value]="subject.semester.toString()"
+                                     label="{{ 'subjectsPage.semester' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
+    </span>
+    <span>
+      <wl-editable-label-value-entry value="{{ subject.teacher?.firstName }} {{ subject.teacher?.lastName }}"
+                                     label="{{ 'subjectsPage.teacher' | translate }}:"
+                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
+    </span>
+  </div>
+  <mat-tab-group>
+    <mat-tab label="{{ 'subjectsPage.content' | translate }}">
+      <div class="row no-gutters">
+        <div class="col-12">
+          <wl-editable-label-value-entry [value]="subject.description"
+                                         label="{{ 'subjectsPage.description' | translate }}:"
+                                         [editPermissions]="editPermissions"></wl-editable-label-value-entry>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="{{ 'subjectsPage.tutors' | translate }}">
+      <wl-users-list *ngIf="subject.tutors && subject.tutors.length" [users]="subject.tutors"
+                     [isEditable]="editPermissions" (removeUser)="removeTutor($event)"></wl-users-list>
+    </mat-tab>
+    <mat-tab label="{{ 'subjectsPage.students' | translate }}">
+      <wl-users-list *ngIf="subject.students && subject.students.length" [users]="subject.students"
+                     [isEditable]="editPermissions" (removeUser)="removeStudent($event)"></wl-users-list>
+    </mat-tab>
+  </mat-tab-group>
+</div>

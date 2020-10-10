@@ -4,6 +4,9 @@
   height: $wl-header-height;
   display: flex;
   justify-content: space-between;
+  box-shadow: $elevation-shadow-teal-12px;
+  position: relative;
+  z-index: 2;
 }
 
 .right-side-container {

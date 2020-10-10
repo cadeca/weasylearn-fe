@@ -14,12 +14,17 @@ import {MaterialModule} from '../../material.module';
 import {ThemeTestPageComponent} from './theme-test-page/theme-test-page.component';
 import {OrganismsModule} from '../organisms/organisms.module';
 import {ProfilePageComponent} from './profile-page/profile-page.component';
+import {SubjectPageComponent} from './subject-page/subject-page.component';
+import {DirectivesModule} from '../../directives/directives.module';
+import {CreateSubjectPageComponent} from './create-subject-page/create-subject-page.component';
 
 const components = [
   SubjectsPageComponent,
   DashboardPageComponent,
   ThemeTestPageComponent,
-  ProfilePageComponent
+  ProfilePageComponent,
+  SubjectPageComponent,
+  CreateSubjectPageComponent
 ];
 
 @NgModule({
@@ -36,7 +41,8 @@ const components = [
     PrimitivesModule,
     RouterModule,
     TranslateModule,
-    MaterialModule
+    MaterialModule,
+    DirectivesModule
   ],
   exports: components,
 })

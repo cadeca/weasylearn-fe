@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 import {AuthService} from './auth.service';
+import {Observable} from 'rxjs';
+import {HttpService} from './Http.service';
 
 @Injectable()
 export class ModulePermissionsService {
@@ -43,7 +45,7 @@ export class ModulePermissionsService {
       whitelistedRoles: ['student', 'developer'],
     }
   ];
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private httpService: HttpService) {
     this.userPermissions = authService.getUserRoles();
   }
 
@@ -58,5 +60,9 @@ export class ModulePermissionsService {
 
   private compareWhitelistedRolesArrays(whitelistedRoles: string[]): boolean {
     return this.userPermissions.some(r => whitelistedRoles.indexOf(r.toLowerCase()) >= 0);
+  }
+
+  getUserPermissionsForSubject(subjectId: string): Observable<any> {
+    return this.httpService.get(`subject/isEditable/${subjectId}`);
   }
 }

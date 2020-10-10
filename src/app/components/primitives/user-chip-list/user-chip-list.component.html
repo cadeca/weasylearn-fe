@@ -1,0 +1,21 @@
+<mat-form-field appearance="legacy" class="subject-form-item">
+  <mat-chip-list #userList>
+    <mat-chip *ngFor="let username of selectedUsernames" [value]="getUserFullNameByUsername(username, allUsers)"
+              removable (removed)="removeUsernameChip(username)">
+      {{ getUserFullNameByUsername(username, allUsers) }}
+      <mat-icon matChipRemove>cancel</mat-icon>
+    </mat-chip>
+    <input #userInput
+           [placeholder]="placeholder"
+           [matAutocomplete]="userAuto"
+           [formControl]="usersControl"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputFor]="userList">
+    <span *ngIf="selectedUsernames && selectedUsernames.length">{{ selectedUsernames.length }}</span>
+  </mat-chip-list>
+  <mat-autocomplete #userAuto (optionSelected)="selectedUsername($event)">
+    <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username">
+      {{ user.firstName }} {{ user.lastName }} - {{ user.email }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

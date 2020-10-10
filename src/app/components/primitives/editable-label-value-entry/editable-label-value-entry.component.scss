@@ -1,0 +1,23 @@
+@import "src/assets/style/animations";
+
+.info-container {
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .edit-info {
+    opacity: 0;
+    @include transition-enter(opacity);
+  }
+
+  &:hover {
+
+    .edit-info {
+      opacity: 1;
+      cursor: pointer;
+      @include transition-leave(opacity);
+    }
+  }
+}

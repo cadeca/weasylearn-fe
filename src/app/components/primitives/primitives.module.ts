@@ -11,6 +11,8 @@ import {SideMenuEntryComponent} from './side-menu-entry/side-menu-entry.componen
 import {FileUploaderComponent} from './file-uploader/file-uploader.component';
 import {LanguageToggleComponent} from './language-toggle/language-toggle.component';
 import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
+import {UserChipListComponent} from './user-chip-list/user-chip-list.component';
+import {EditableLabelValueEntryComponent} from './editable-label-value-entry/editable-label-value-entry.component';
 import {ImageCropperModule} from 'ngx-image-cropper';
 import {ImageUploaderComponent} from './image-uploader/image-uploader.component';
 
@@ -19,6 +21,9 @@ const components = [
   SideMenuEntryComponent,
   FileUploaderComponent,
   LanguageToggleComponent,
+  UserProfileMenuComponent,
+  UserChipListComponent,
+  EditableLabelValueEntryComponent
   UserProfileMenuComponent,
   ImageUploaderComponent
 ];
