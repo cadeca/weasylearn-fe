@@ -13,12 +13,14 @@ export class UserService {
     return this.httpService.get('user/profile');
   }
 
-  getProfileImage(): Observable<File> {
-    return this.httpService.get('user/profile/image');
+  getProfileImage(): Observable<Blob> {
+    return this.httpService.get('user/profile/image', {responseType: 'blob'});
   }
 
-  setProfileImage(file): Observable<any> {
-    return this.httpService.post('user/profile/image', file);
+  setProfileImage(file: File): Observable<any> {
+    const data = new FormData();
+    data.append('file', file, file.name);
+    return this.httpService.post('user/profile/image', data);
   }
 
   getTeachers(): Observable<Teacher[]> {

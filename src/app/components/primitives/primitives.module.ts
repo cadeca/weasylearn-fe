@@ -23,7 +23,7 @@ const components = [
   LanguageToggleComponent,
   UserProfileMenuComponent,
   UserChipListComponent,
-  EditableLabelValueEntryComponent
+  EditableLabelValueEntryComponent,
   UserProfileMenuComponent,
   ImageUploaderComponent
 ];
