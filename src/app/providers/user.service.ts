@@ -30,6 +30,6 @@ export class UserService {
   }
 
   searchUsers(query: string, type: string): Observable<User[]> {
-    return this.httpService.get(`user/search?query=${query}&type=${type}`);
+    return this.httpService.get(`user/search?query=${query}${type ? '&type=' + type : ''}`);
   }
 }

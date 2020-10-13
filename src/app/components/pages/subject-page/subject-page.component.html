@@ -1,20 +1,40 @@
 <div class="subject-page" *ngIf="subject">
-  <h1>{{ subject.name }}</h1>
+  <h1>
+    <wl-editable-label-value-entry class="d-inline-flex"
+                                   [value]="subject.name"
+                                   label=""
+                                   (valueChange)="infoChange('name', $event)"
+                                   [editPermissions]="editPermissions"></wl-editable-label-value-entry></h1>
   <div class="header-information d-flex justify-content-between">
     <span>
       <wl-editable-label-value-entry class="d-inline-flex"
                                      [value]="subject.code"
                                      label="{{ 'subjectsPage.code' | translate }}:"
+                                     (valueChange)="infoChange('code', $event)"
                                      [editPermissions]="editPermissions"></wl-editable-label-value-entry>
       <wl-editable-label-value-entry class="d-inline-flex"
                                      [value]="subject.semester.toString()"
                                      label="{{ 'subjectsPage.semester' | translate }}:"
+                                     (valueChange)="infoChange('semester', $event)"
                                      [editPermissions]="editPermissions"></wl-editable-label-value-entry>
     </span>
     <span>
-      <wl-editable-label-value-entry value="{{ subject.teacher?.firstName }} {{ subject.teacher?.lastName }}"
+      <wl-editable-label-value-entry *ngIf="!(teachers && teachers.length && addTeacherInputVisible)"
+                                     value="{{ subject.teacher?.firstName }} {{ subject.teacher?.lastName }}"
                                      label="{{ 'subjectsPage.teacher' | translate }}:"
-                                     [editPermissions]="editPermissions"></wl-editable-label-value-entry>
+                                     [editPermissions]="editPermissions"
+                                     (triggerManualEdit)="editTeacher()"
+                                     [manualEdit]="true"></wl-editable-label-value-entry>
+      <mat-form-field appearance="legacy" class="subject-form-item" *ngIf="teachers && teachers.length && addTeacherInputVisible">
+        <input matInput placeholder="Teacher"
+               [matAutocomplete]="teacherAuto"
+               [value]="formatUser(selectedTeacher)">
+        <mat-autocomplete #teacherAuto (optionSelected)="selectTeacher($event)">
+          <mat-option *ngFor="let teacher of teachers" [value]="teacher">
+            {{ formatUser(teacher) }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
     </span>
   </div>
   <mat-tab-group>
@@ -23,15 +43,31 @@
         <div class="col-12">
           <wl-editable-label-value-entry [value]="subject.description"
                                          label="{{ 'subjectsPage.description' | translate }}:"
+                                         (valueChange)="infoChange('description', $event)"
                                          [editPermissions]="editPermissions"></wl-editable-label-value-entry>
         </div>
       </div>
     </mat-tab>
     <mat-tab label="{{ 'subjectsPage.tutors' | translate }}">
+      <div class="d-flex justify-content-end pt-2">
+        <button mat-raised-button color="accent" *ngIf="editPermissions" (click)="addTutors()">
+          {{ 'subjectsPage.addStudents' | translate }}
+        </button>
+      </div>
+      <wl-user-chip-list [preselectedUsers]="[]" *ngIf="addTutorsInputVisible"
+                         [placeholder]="'Tutors'" (selectedUserChange)="selectTutors($event)"></wl-user-chip-list>
       <wl-users-list *ngIf="subject.tutors && subject.tutors.length" [users]="subject.tutors"
                      [isEditable]="editPermissions" (removeUser)="removeTutor($event)"></wl-users-list>
     </mat-tab>
     <mat-tab label="{{ 'subjectsPage.students' | translate }}">
+      <div class="d-flex justify-content-end pt-2">
+        <button mat-raised-button color="accent" *ngIf="editPermissions" (click)="addStudents()">
+          {{ 'subjectsPage.addTutors' | translate }}
+        </button>
+      </div>
+      <wl-user-chip-list [userType]="'Student'"  *ngIf="addStudentsInputVisible"
+                         [preselectedUsers]="[]"
+                         [placeholder]="'Students'" (selectedUserChange)="selectStudents($event)"></wl-user-chip-list>
       <wl-users-list *ngIf="subject.students && subject.students.length" [users]="subject.students"
                      [isEditable]="editPermissions" (removeUser)="removeStudent($event)"></wl-users-list>
     </mat-tab>
