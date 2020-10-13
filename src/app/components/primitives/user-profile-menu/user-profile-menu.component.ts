@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import {UserService} from '../../../providers/user.service';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
+
 @Component({
   selector: 'wl-user-profile-menu',
   templateUrl: './user-profile-menu.component.html',
@@ -13,7 +14,7 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 export class UserProfileMenuComponent implements OnInit {
 
   username: string;
-  image: SafeUrl = null;
+  image: any = '';
 
   constructor(private keycloakService: KeycloakService,
               private authService: AuthService,
@@ -28,6 +29,7 @@ export class UserProfileMenuComponent implements OnInit {
       img.text().then(content => this.image = content);
     });
   }
+
 
   logout(): void {
     this.keycloakService.logout();

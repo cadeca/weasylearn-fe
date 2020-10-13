@@ -14,7 +14,7 @@ export class UserService {
   }
 
   getProfileImage(): Observable<Blob> {
-    return this.httpService.get('user/profile/image', {responseType: 'blob'});
+    return this.httpService.get('user/profile/image', {responseType: 'blob' as 'json'});
   }
 
   setProfileImage(file: File): Observable<any> {
