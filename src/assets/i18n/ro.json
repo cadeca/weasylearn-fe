@@ -3,7 +3,11 @@
     "name": "Nume",
     "code": "Cod",
     "semester": "Semestru",
-    "description": "Descriere"
+    "description": "Descriere",
+    "save": "Save",
+    "dragAndDropFile": "Adăugați fișier cu drag & drop",
+    "or": "sau",
+    "click": "dați click"
   },
   "header": {
     "profile": "Profil",
@@ -38,7 +42,10 @@
     "lastName": "Nume",
     "email": "Email",
     "type": "Tip",
-    "username": "Nume de utilizator"
+    "username": "Nume de utilizator",
+    "picture": "Imagine de profil",
+    "changePicture": "Schimbă imaginea de profil",
+    "uploadPicture": "Încarcă o imagine"
   },
   "userDetail" : {
     "firstName": "Prenume",

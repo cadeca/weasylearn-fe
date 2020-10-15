@@ -25,8 +25,9 @@ export class UserProfileMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.username = this.authService.getUserName();
-    this.userService.getProfileImage().subscribe(img => {
-      img.text().then(content => this.image = content);
+    this.requestImage();
+    this.userService.profileImageChange.subscribe(change => {
+      this.requestImage();
     });
   }
 
@@ -37,5 +38,11 @@ export class UserProfileMenuComponent implements OnInit {
 
   profilePage(): void {
     this.router.navigate(['/home/profile']);
+  }
+
+  private requestImage(): void {
+    this.userService.getProfileImage().subscribe(img => {
+      img.text().then(content => this.image = content);
+    });
   }
 }

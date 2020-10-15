@@ -11,28 +11,32 @@ import {switchMap} from 'rxjs/operators';
 })
 export class ProfilePageComponent implements OnInit {
   userProfile: User;
-  changePictureRequested = false;
+  profilePicture = '';
 
   constructor(private authService: AuthService, private userService: UserService) {
   }
 
   ngOnInit(): void {
-    this.userService.getProfile().pipe(switchMap(user => {
-      this.userProfile = user;
-      return this.userService.getProfileImage();
-    })).subscribe(image => image.text().then(content => this.userProfile.profilePicture = content));
+    this.userService.getProfile().subscribe(profile => {
+      this.userProfile = profile;
+    });
+    this.getProfilePicture();
   }
 
   viewProfile(): void {
     this.authService.goToProfilePage();
   }
 
+  getProfilePicture(): void {
+    this.userService.getProfileImage().subscribe(img => {
+      img.text().then(content => this.profilePicture = content);
+    });
+  }
+
   onImageSelected(picture: File): void {
-    console.log(picture);
     if (picture) {
       this.userService.setProfileImage(picture).subscribe(image => {
-        this.userProfile.profilePicture = image;
-        this.changePictureRequested = false;
+        this.getProfilePicture();
       });
     }
 

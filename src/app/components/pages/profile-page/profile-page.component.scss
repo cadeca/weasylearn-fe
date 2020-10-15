@@ -1,7 +1,16 @@
-.user-information {
-  padding: 1rem 0;
+.profile-page {
 
-  .label {
-    margin-right: 5px;
+  .user-information {
+    padding: 1rem 0;
+
+    .label {
+      margin-right: 5px;
+    }
+  }
+
+  .profile-image {
+    width: 50%;
+    height: 250px;
+    object-fit: contain;
   }
 }

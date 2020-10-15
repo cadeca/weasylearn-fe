@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {ImageCroppedEvent} from 'ngx-image-cropper';
+import {ImageCroppedEvent, ImageTransform} from 'ngx-image-cropper';
 
 @Component({
   selector: 'wl-image-uploader',
@@ -14,6 +14,8 @@ export class ImageUploaderComponent {
   file: File = null;
   imageChangedEvent: any = '';
   croppedImage: any = '';
+  scale = 1;
+  transform: ImageTransform = {};
 
   onImageSelected(event: any): void {
     this.imageChangedEvent = event;
@@ -42,5 +44,21 @@ export class ImageUploaderComponent {
       this.croppedImage = null;
       this.imageChangedEvent = null;
     }
+  }
+
+  zoomOut(): void {
+    this.scale -= 0.1;
+    this.transform = {
+      ...this.transform,
+      scale: this.scale
+    };
+  }
+
+  zoomIn(): void {
+    this.scale += 0.1;
+    this.transform = {
+      ...this.transform,
+      scale: this.scale
+    };
   }
 }
