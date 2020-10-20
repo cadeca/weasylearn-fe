@@ -3,7 +3,11 @@
     "name": "Name",
     "code": "Code",
     "semester": "Semester",
-    "description": "Description"
+    "description": "Description",
+    "save": "Save",
+    "dragAndDropFile": "Drag and drop a file",
+    "or": "or",
+    "click": "click"
   },
   "header": {
     "profile": "Profile",
@@ -39,7 +43,10 @@
     "lastName": "Last Name",
     "email": "Email",
     "type": "Type",
-    "username": "Username"
+    "username": "Username",
+    "picture": "Profile image",
+    "changePicture": "Change image",
+    "uploadPicture": "Upload your user profile picture"
   },
   "userDetail" : {
     "firstName": "First Name",

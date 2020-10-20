@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../../providers/auth.service';
 import {UserService} from '../../../providers/user.service';
 import {User} from '../../../providers/types/wl-types';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'wl-profile',
@@ -10,28 +11,32 @@ import {User} from '../../../providers/types/wl-types';
 })
 export class ProfilePageComponent implements OnInit {
   userProfile: User;
-  profileImage: File;
+  profilePicture = '';
 
   constructor(private authService: AuthService, private userService: UserService) {
   }
 
   ngOnInit(): void {
-    this.userService.getProfile().subscribe(userProfile => {
-      this.userProfile = userProfile;
+    this.userService.getProfile().subscribe(profile => {
+      this.userProfile = profile;
     });
-    this.userService.getProfileImage().subscribe(image => {
-      this.profileImage = image;
-    });
+    this.getProfilePicture();
   }
 
   viewProfile(): void {
     this.authService.goToProfilePage();
   }
 
-  onImageSelected(files: File[]): void {
-    if (files && files[0]) {
-      this.userService.setProfileImage(files[0]).subscribe(image => {
-        this.profileImage = image;
+  getProfilePicture(): void {
+    this.userService.getProfileImage().subscribe(img => {
+      img.text().then(content => this.profilePicture = content);
+    });
+  }
+
+  onImageSelected(picture: File): void {
+    if (picture) {
+      this.userService.setProfileImage(picture).subscribe(image => {
+        this.getProfilePicture();
       });
     }
 

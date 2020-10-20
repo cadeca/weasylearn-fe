@@ -1,10 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpService} from './Http.service';
-import {Observable} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {Teacher, User} from './types/wl-types';
 
 @Injectable()
 export class UserService {
+
+  profileImageChange: BehaviorSubject<any> = new BehaviorSubject<any>(true);
 
   constructor(private httpService: HttpService) {
   }
@@ -13,12 +15,15 @@ export class UserService {
     return this.httpService.get('user/profile');
   }
 
-  getProfileImage(): Observable<File> {
-    return this.httpService.get('user/profile/image');
+  getProfileImage(): Observable<Blob> {
+    return this.httpService.get('user/profile/image', {responseType: 'blob' as 'json'});
   }
 
-  setProfileImage(file): Observable<any> {
-    return this.httpService.post('user/profile/image', file);
+  setProfileImage(file: File): Observable<any> {
+    const data = new FormData();
+    data.append('file', file, file.name);
+    this.profileImageChange.next(true);
+    return this.httpService.post('user/profile/image', data);
   }
 
   getTeachers(): Observable<Teacher[]> {

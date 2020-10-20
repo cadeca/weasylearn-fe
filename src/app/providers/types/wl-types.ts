@@ -43,6 +43,7 @@ export interface User {
   username?: string;
   email: string;
   type?: string;
+  profilePicture?: any;
 }
 
 export interface Teacher extends User {
