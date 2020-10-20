@@ -25,13 +25,13 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 
-import {keycloakConfig} from "../../src/environments/environment";
+import {keycloakConfig} from "../../src/environments/environment.test";
 
 Cypress.Commands.add('kcLogin', (username, password) => {
   const kcRoot = keycloakConfig.url;
   const kcRealm = keycloakConfig.realm;
   const kcClient = keycloakConfig.clientId;
-  const kcRedirectUri = 'http://localhost:2023/';
+  const kcRedirectUri = keycloakConfig.redirectUrl;
   cy.log(`kcRoot: ${kcRoot}`);
   cy.log(`kcRedirectUri: ${kcRedirectUri}`);
   cy.log(createUUID());
@@ -93,7 +93,7 @@ Cypress.Commands.add('kcLogin', (username, password) => {
 Cypress.Commands.add('kcLogout', () => {
   const kcRoot = keycloakConfig.url;
   const kcRealm = keycloakConfig.realm;
-  const kcRedirectUri = 'http://localhost:2023/';
+  const kcRedirectUri = keycloakConfig.redirectUrl;
   return cy.request({
     followRedirect: true,
     url: `${kcRoot}/realms/${kcRealm}/protocol/openid-connect/logout`,

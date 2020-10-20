@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "stylelint": "npx stylelint src/**/*.scss",
     "stylelint-fix": "npx stylelint src/**/*.scss --fix",
-    "prepush": "npm run lint & npm run stylelint & npm run test",
+    "prepush": "npm run lint & npm run stylelint",
     "cypress:open": "cypress open"
   },
   "private": true,
