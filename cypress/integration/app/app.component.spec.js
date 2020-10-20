@@ -1,5 +1,13 @@
 describe('The Home Page', () => {
-  it('successfully loads', () => {
-    cy.visit('/#/')
-  })
+  beforeEach(() =>  {
+    cy.kcLogin('admin', 'admin');
+  });
+  afterEach(() =>  {
+    cy.kcLogout();
+  });
+  it('loads page and should render logged username', () =>  {
+    cy.visit('/');
+    cy.get('#username')
+      .should('contain', 'admin');
+  });
 })

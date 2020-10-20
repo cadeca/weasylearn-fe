@@ -5,7 +5,7 @@
 import {KeycloakConfig, KeycloakInitOptions} from 'keycloak-js';
 import {KeycloakOptions} from 'keycloak-angular';
 
-const keycloakConfig: KeycloakConfig = {
+export const keycloakConfig: KeycloakConfig = {
   url: 'https://accounts.weasylearn.ro/auth',
   realm: 'weasylearn-local',
   clientId: 'weasylearn-fe'
