@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UsersListComponent should match empty snapshot 1`] = `
+<wl-users-list
+  allUsers={[Function Array]}
+  isEditable="false"
+  removeUser={[Function EventEmitter_]}
+  visibleUsers={[Function Array]}
+>
+  <div
+    class="users-list"
+  >
+    <mat-list
+      class="mat-list mat-list-base"
+      role="list"
+    >
+      <mat-list-item
+        class="list-headline mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+          <div
+            class="user-entry row font-weight-bold "
+          >
+            <div
+              class="col-2"
+            >
+               userDetail.firstName 
+            </div>
+            <div
+              class="col-2"
+            >
+               userDetail.lastName 
+            </div>
+            <div
+              class="col-3"
+            >
+               userDetail.username 
+            </div>
+            <div
+              class="col-4"
+            >
+               userDetail.email 
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+      <div
+        class="scrollable-list"
+      >
+        
+      </div>
+      
+      <mat-list-item
+        class="mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+           userDetail.noUser
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</wl-users-list>
+`;
+
+exports[`UsersListComponent should match snapshot 1`] = `
+<wl-users-list
+  allUsers={[Function Array]}
+  isEditable="false"
+  removeUser={[Function EventEmitter_]}
+  visibleUsers={[Function Array]}
+>
+  <div
+    class="users-list"
+  >
+    <mat-list
+      class="mat-list mat-list-base"
+      role="list"
+    >
+      <mat-list-item
+        class="list-headline mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+          <div
+            class="user-entry row font-weight-bold "
+          >
+            <div
+              class="col-2"
+            >
+               userDetail.firstName 
+            </div>
+            <div
+              class="col-2"
+            >
+               userDetail.lastName 
+            </div>
+            <div
+              class="col-3"
+            >
+               userDetail.username 
+            </div>
+            <div
+              class="col-4"
+            >
+               userDetail.email 
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+      <div
+        class="scrollable-list"
+      >
+        
+      </div>
+      
+      <mat-list-item
+        class="mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+           userDetail.noUser
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</wl-users-list>
+`;
+
+exports[`UsersListComponent should match snapshot with data 1`] = `
+<wl-users-list
+  allUsers={[Function Array]}
+  isEditable="false"
+  removeUser={[Function EventEmitter_]}
+  visibleUsers={[Function Array]}
+>
+  <div
+    class="users-list"
+  >
+    <mat-list
+      class="mat-list mat-list-base"
+      role="list"
+    >
+      <mat-list-item
+        class="list-headline mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+          <div
+            class="user-entry row font-weight-bold "
+          >
+            <div
+              class="col-2"
+            >
+               userDetail.firstName 
+            </div>
+            <div
+              class="col-2"
+            >
+               userDetail.lastName 
+            </div>
+            <div
+              class="col-3"
+            >
+               userDetail.username 
+            </div>
+            <div
+              class="col-4"
+            >
+               userDetail.email 
+            </div>
+          </div>
+        </div>
+      </mat-list-item>
+      <div
+        class="scrollable-list"
+      >
+        
+      </div>
+      
+      <mat-list-item
+        class="mat-list-item mat-focus-indicator"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+          />
+          <div
+            class="mat-list-text"
+          />
+           userDetail.noUser
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</wl-users-list>
+`;
