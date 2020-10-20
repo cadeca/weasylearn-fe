@@ -37,8 +37,9 @@ export class ThemeSwitcherComponent implements OnInit {
 
   changeTheme(themeColorToSet, themeLightToSet): void {
     const body = document.getElementsByTagName('body')[0];
-    body.classList.remove(this.themeColor + this.themeLight);
-
+    if (body) {
+      body.classList.remove(this.themeColor + this.themeLight);
+    }
     // switch theme
     if (this.themeColor !== themeColorToSet && themeColorToSet) {
       this.themeColor = themeColorToSet;
@@ -46,11 +47,13 @@ export class ThemeSwitcherComponent implements OnInit {
     if (this.themeLight !== themeLightToSet && themeLightToSet) {
       this.themeLight = themeLightToSet;
     }
-    body.classList.add(this.themeColor + this.themeLight);
+
+    if (body) {
+      body.classList.add(this.themeColor + this.themeLight);
+    }
 
     // save it to local storage
     this.darkThemeModeOn = this.themeLight === DARK_THEME;
-
     localStorage.setItem('pxThemeColor', this.themeColor);
     localStorage.setItem('pxThemeLight', this.themeLight);
   }

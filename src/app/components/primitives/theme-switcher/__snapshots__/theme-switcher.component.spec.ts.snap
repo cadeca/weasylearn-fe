@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSwitcherComponent should match snapshot 1`] = `
+<wl-theme-switcher
+  darkThemeModeOn={[Function Boolean]}
+  themeColor={[Function String]}
+  themeLight={[Function String]}
+>
+  <div
+    class="theme-switcher"
+  >
+    <div>
+      <mat-icon
+        aria-haspopup="true"
+        aria-hidden="true"
+        class="icon mat-icon notranslate mat-menu-trigger material-icons mat-icon-no-color"
+        id="color-change-trigger"
+        role="img"
+      >
+         palette 
+      </mat-icon>
+      <mat-menu>
+        
+      </mat-menu>
+    </div>
+    <div>
+      <mat-slide-toggle
+        class="mat-slide-toggle mat-accent mat-checked"
+        id="dark-theme-toggle"
+        tabindex="-1"
+      >
+        <label
+          class="mat-slide-toggle-label"
+          for="dark-theme-toggle-input"
+        >
+          <div
+            class="mat-slide-toggle-bar mat-slide-toggle-bar-no-side-margin"
+          >
+            <input
+              aria-checked="true"
+              class="mat-slide-toggle-input cdk-visually-hidden"
+              id="dark-theme-toggle-input"
+              role="switch"
+              tabindex="0"
+              type="checkbox"
+            />
+            <div
+              class="mat-slide-toggle-thumb-container"
+            >
+              <div
+                class="mat-slide-toggle-thumb"
+              />
+              <div
+                class="mat-slide-toggle-ripple mat-focus-indicator mat-ripple"
+                mat-ripple=""
+              >
+                <div
+                  class="mat-ripple-element mat-slide-toggle-persistent-ripple"
+                />
+              </div>
+            </div>
+          </div>
+          <span
+            class="mat-slide-toggle-content"
+          >
+            <span
+              style="display:none"
+            >
+               
+            </span>
+          </span>
+        </label>
+      </mat-slide-toggle>
+    </div>
+  </div>
+</wl-theme-switcher>
+`;
