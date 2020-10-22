@@ -11,7 +11,7 @@
            [formControl]="usersControl"
            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
            [matChipInputFor]="userList">
-    <span *ngIf="selectedUsernames && selectedUsernames.length">{{ selectedUsernames.length }}</span>
+    <span *ngIf="selectedUsernames && selectedUsernames.length" class="chip-number">{{ selectedUsernames.length }}</span>
   </mat-chip-list>
   <mat-autocomplete #userAuto (optionSelected)="selectedUsername($event)">
     <mat-option *ngFor="let user of filteredUsers | async" [value]="user.username">

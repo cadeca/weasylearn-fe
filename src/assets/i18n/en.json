@@ -34,7 +34,10 @@
     "noSubjects": "No Subject available",
     "tutors": "Tutors",
     "teacher": "Teacher",
-    "students": "Students"
+    "students": "Students",
+    "addStudents": "Add students",
+    "addTutors": "Add tutors",
+    "content": "General"
   },
   "profilePage": {
     "profile": "My Profile",
