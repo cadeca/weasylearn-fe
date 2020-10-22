@@ -31,13 +31,17 @@
         <span>{{ userProfile.type }}</span>
       </div>
     </div>
-    <div class="col-12">
-      <h6>Upload your user profile picture</h6>
-      <wl-file-uploader [extensions]="['jpg', 'jpeg', 'png', 'img']"
-                          [accept]="'.jpg, .jpeg, .png, .img'"
-                          (filesChange)="onImageSelected($event)"
-                          [multiple]="false"
-                          id="inputProfile"></wl-file-uploader>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 col-md-6 d-flex align-content-start profile-image-container">
+      <div class="d-inline-block">
+        <h6 class="profile-picture">{{ 'profilePage.picture' | translate }}: </h6>
+      </div>
+      <img [src]="profilePicture" class="d-inline-block px-2 profile-image" *ngIf="profilePicture">
+    </div>
+    <div class="col-12 col-md-6">
+      <h6>{{ 'profilePage.uploadPicture' | translate }}</h6>
+      <wl-image-uploader (imageChange)="onImageSelected($event)"></wl-image-uploader>
     </div>
   </div>
 </div>
