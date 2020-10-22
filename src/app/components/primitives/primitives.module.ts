@@ -13,6 +13,8 @@ import {LanguageToggleComponent} from './language-toggle/language-toggle.compone
 import {UserProfileMenuComponent} from './user-profile-menu/user-profile-menu.component';
 import {UserChipListComponent} from './user-chip-list/user-chip-list.component';
 import {EditableLabelValueEntryComponent} from './editable-label-value-entry/editable-label-value-entry.component';
+import {ImageCropperModule} from 'ngx-image-cropper';
+import {ImageUploaderComponent} from './image-uploader/image-uploader.component';
 
 const components = [
   ThemeSwitcherComponent,
@@ -21,7 +23,9 @@ const components = [
   LanguageToggleComponent,
   UserProfileMenuComponent,
   UserChipListComponent,
-  EditableLabelValueEntryComponent
+  EditableLabelValueEntryComponent,
+  UserProfileMenuComponent,
+  ImageUploaderComponent
 ];
 
 @NgModule({
@@ -34,7 +38,8 @@ const components = [
     ReactiveFormsModule,
     FlexLayoutModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    ImageCropperModule
   ],
   exports: components,
 })

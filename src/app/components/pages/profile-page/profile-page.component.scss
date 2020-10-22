@@ -1,7 +1,27 @@
-.user-information {
-  padding: 1rem 0;
+@import "src/assets/style/variables";
 
-  .label {
-    margin-right: 5px;
+.profile-page {
+
+  .user-information {
+    padding: 1rem 0;
+
+    .label {
+      margin-right: 5px;
+    }
+  }
+
+  .profile-image-container {
+
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $md) {
+
+      .profile-image {
+        width: 100%;
+        display: block !important;
+      }
+    }
   }
 }

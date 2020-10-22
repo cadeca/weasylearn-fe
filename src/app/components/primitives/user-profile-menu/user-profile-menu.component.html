@@ -1,8 +1,8 @@
 <div [matMenuTriggerFor]="menu" class="profile">
   <h6 id="username">{{ username }}</h6>
-  <div class="image-container" > </div>
+  <img [src]="image" class="image-container">
 </div>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="profilePage()" > {{ 'header.profile' | translate}}</button>
-  <button mat-menu-item  (click)="logout()" > {{ 'header.logout' | translate}} </button>
+  <button mat-menu-item (click)="profilePage()"> {{ 'header.profile' | translate}}</button>
+  <button mat-menu-item (click)="logout()"> {{ 'header.logout' | translate}} </button>
 </mat-menu>
