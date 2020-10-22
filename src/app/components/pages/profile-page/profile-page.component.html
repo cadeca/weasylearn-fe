@@ -9,35 +9,50 @@
   <div class="row no-gutters">
     <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
       <div class="row no-gutters">
-        <h6 class="label">{{ 'profilePage.firstName' | translate }}: </h6>
-        <span>{{ userProfile.firstName }}</span>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]="userProfile.firstName"
+                                       label="{{ 'profilePage.firstName' | translate }}:"
+                                       [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
-        <h6 class="label">{{ 'profilePage.lastName' | translate }}: </h6>
-        <span>{{ userProfile.lastName }}</span>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]="userProfile.lastName"
+                                       label="{{ 'profilePage.lastName' | translate }}:"
+                                       [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
-        <h6 class="label">{{ 'profilePage.username' | translate }}: </h6>
-        <span>{{ userProfile.username }}</span>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]="userProfile.username"
+                                       label="{{ 'profilePage.username' | translate }}:"
+                                       [editPermissions]="false"></wl-editable-label-value-entry>
       </div>
     </div>
     <div class="col-12 col-md-6 user-information" *ngIf="userProfile">
       <div class="row no-gutters">
-        <h6 class="label">{{ 'profilePage.email' | translate }}: </h6>
-        <span>{{ userProfile.email }}</span>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]="userProfile.email"
+                                       label="{{ 'profilePage.email' | translate }}:"
+                                       [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
-        <h6 class="label">{{ 'profilePage.type' | translate }}: </h6>
-        <span>{{ userProfile.type }}</span>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]="userProfile.type"
+                                       label="{{ 'profilePage.type' | translate }}:"
+                                       [editPermissions]="false"></wl-editable-label-value-entry>
       </div>
     </div>
   </div>
   <div class="row no-gutters">
     <div class="col-12 col-md-6 d-flex align-content-start profile-image-container">
       <div class="d-inline-block">
-        <h6 class="profile-picture">{{ 'profilePage.picture' | translate }}: </h6>
+        <wl-editable-label-value-entry class="d-inline-flex"
+                                       [value]=""
+                                       label="{{ 'profilePage.picture' | translate }}:"
+                                       [editPermissions]="false"></wl-editable-label-value-entry>
       </div>
-      <img [src]="profilePicture" class="d-inline-block px-2 profile-image" *ngIf="profilePicture">
+     <div class="image-wrapper">
+       <img [src]="profilePicture" class="d-inline-block px-2 profile-image" *ngIf="profilePicture">
+     </div>
     </div>
     <div class="col-12 col-md-6">
       <h6>{{ 'profilePage.uploadPicture' | translate }}</h6>

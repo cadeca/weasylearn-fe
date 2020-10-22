@@ -1,6 +1,6 @@
 <div [matMenuTriggerFor]="menu" class="profile">
   <h6>{{ username }}</h6>
-  <img [src]="image" class="image-container">
+  <img [src]="image" class="image-container round-border">
 </div>
 <mat-menu #menu="matMenu">
   <button mat-menu-item (click)="profilePage()"> {{ 'header.profile' | translate}}</button>
