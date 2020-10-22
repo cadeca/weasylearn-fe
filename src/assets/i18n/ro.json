@@ -33,7 +33,10 @@
     "noSubjects": "Nici un curs valabil",
     "tutors": "Tutori",
     "teacher": "Profesor",
-    "students": "Studenți"
+    "students": "Studenți",
+    "addStudents": "Adaugă studenți",
+    "addTutors": "Adaugă tutori",
+    "content": "General"
   },
   "profilePage": {
     "profile": "Profilul meu",

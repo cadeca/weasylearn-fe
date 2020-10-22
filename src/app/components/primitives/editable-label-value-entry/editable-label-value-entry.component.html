@@ -1,6 +1,9 @@
 <div class="info-container">
   <span class="label">{{ label }}</span>
-  {{ value }}
-  <mat-icon color="accent" class="edit-info" aria-label="Edit" *ngIf="editPermissions" (click)="editRequest()">edit
+  <mat-form-field class="example-form-field" *ngIf="editable && !manualEdit">
+    <input matInput type="text" [(ngModel)]="value" (keydown.enter)="saveValue()">
+  </mat-form-field>
+  <span *ngIf="!(editable && !manualEdit)">{{ value }}</span>
+  <mat-icon color="accent" class="edit-info" aria-label="Edit" *ngIf="editPermissions && !(editable && !manualEdit)" (click)="editRequest()">edit
   </mat-icon>
 </div>

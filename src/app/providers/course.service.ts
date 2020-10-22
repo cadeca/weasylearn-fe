@@ -40,4 +40,12 @@ export class CourseService {
   removeStudent(courseID: any, studentUsername): Observable<any> {
     return this.httpService.delete(`subject/${courseID}/student?username=${studentUsername}`);
   }
+
+  addTutor(courseID: any, tutorUsername): Observable<any> {
+    return this.httpService.put(`subject/${courseID}/tutor?username=${tutorUsername}`, {});
+  }
+
+  addStudent(courseID: any, studentUsername): Observable<any> {
+    return this.httpService.put(`subject/${courseID}/student?username=${studentUsername}`, {});
+  }
 }
