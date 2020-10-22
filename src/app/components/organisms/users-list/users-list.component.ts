@@ -38,7 +38,7 @@ export class UsersListComponent {
     }
   }
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   editUser(username): void {
     this.removeUser.emit(username);
