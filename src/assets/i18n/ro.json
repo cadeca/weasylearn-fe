@@ -48,7 +48,8 @@
     "username": "Nume de utilizator",
     "picture": "Imagine de profil",
     "changePicture": "Schimbă imaginea de profil",
-    "uploadPicture": "Încarcă o imagine"
+    "uploadPicture": "Încarcă o imagine",
+    "preview": "Previzualizare"
   },
   "userDetail" : {
     "firstName": "Prenume",

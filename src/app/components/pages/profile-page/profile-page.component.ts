@@ -17,10 +17,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.getProfile().subscribe(profile => {
-      this.userProfile = profile;
-    });
-    this.getProfilePicture();
+    this.retrieveProfile();
   }
 
   viewProfile(): void {
@@ -40,5 +37,20 @@ export class ProfilePageComponent implements OnInit {
       });
     }
 
+  }
+
+  infoChange(code: string, value: any): void {
+    const newUserProfile: any = {...this.userProfile};
+    newUserProfile[code] = value;
+    this.userService.setProfile(newUserProfile).subscribe(() => {
+      this.retrieveProfile();
+    });
+  }
+
+  private retrieveProfile(): void {
+    this.userService.getProfile().subscribe(profile => {
+      this.userProfile = profile;
+    });
+    this.getProfilePicture();
   }
 }

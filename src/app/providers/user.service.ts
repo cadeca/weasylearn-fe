@@ -37,4 +37,8 @@ export class UserService {
   searchUsers(query: string, type: string): Observable<User[]> {
     return this.httpService.get(`user/search?query=${query}${type ? '&type=' + type : ''}`);
   }
+
+  setProfile(profile: any): Observable<User> {
+      return this.httpService.post('user/profile', profile);
+  }
 }

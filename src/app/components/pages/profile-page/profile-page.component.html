@@ -12,12 +12,14 @@
         <wl-editable-label-value-entry class="d-inline-flex"
                                        [value]="userProfile.firstName"
                                        label="{{ 'profilePage.firstName' | translate }}:"
+                                       (valueChange)="infoChange('firstName', $event)"
                                        [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
         <wl-editable-label-value-entry class="d-inline-flex"
                                        [value]="userProfile.lastName"
                                        label="{{ 'profilePage.lastName' | translate }}:"
+                                       (valueChange)="infoChange('lastName', $event)"
                                        [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
@@ -32,6 +34,7 @@
         <wl-editable-label-value-entry class="d-inline-flex"
                                        [value]="userProfile.email"
                                        label="{{ 'profilePage.email' | translate }}:"
+                                       (valueChange)="infoChange('email', $event)"
                                        [editPermissions]="true"></wl-editable-label-value-entry>
       </div>
       <div class="row no-gutters">
