@@ -1,4 +1,4 @@
-<div class="row no-gutters">
+<div class="row no-gutters image-uploader">
   <div class="file-uploader col-12 col-md-6">
     <div class="drop-area-container">
       <input (change)="onImageSelected($event)" #inputField class="drop-area"
@@ -10,8 +10,8 @@
         {{ 'general.click' | translate}}!<br/>
       </div>
     </div>
-    <div class="row">
-      <div class="row d-flex w-100 justify-content-center">
+    <div class="row no-gutters">
+      <div class="row no-gutters d-flex w-100 justify-content-center">
         <button mat-mini-fab
                 *ngIf="imageChangedEvent"
                 (click)="zoomOut()">
@@ -43,5 +43,14 @@
     </div>
     <button *ngIf="imageChangedEvent" mat-raised-button color="accent"
             (click)="saveImage()">{{ 'general.save' | translate}}</button>
+  </div>
+  <div class="file-uploader-preview col-12 col-md-6" *ngIf="croppedImage">
+    <div class="preview">{{ 'profilePage.preview' | translate}}</div>
+    <div class="image-wrapper">
+      <img [src]="croppedImage" class="d-block px-2 round-border">
+    </div>
+    <div class="image-wrapper">
+      <img [src]="croppedImage" class="d-block px-">
+    </div>
   </div>
 </div>
